@@ -1,0 +1,16 @@
+{
+  "header": "# 📦 Changelog",
+  "types": [
+    { "type": "feat", "section": "✨ Features" },
+    { "type": "fix", "section": "🐛 Bug Fixes" },
+    { "type": "chore", "section": "🔧 Chores", "hidden": false },
+    { "type": "docs", "section": "📝 Documentation" },
+    { "type": "refactor", "section": "♻️ Code Refactoring" },
+    { "type": "test", "section": "✅ Tests" }
+  ],
+  "skip": {
+    "tag": false
+  },
+  "commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
+  "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}"
+}
