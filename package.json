@@ -1,5 +1,5 @@
 {
-  "name": "vue3-scalable-kit",
+  "name": "c5vargas_portfolio",
   "private": true,
   "version": "0.0.20",
   "type": "module",
@@ -18,13 +18,17 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@fontsource/quattrocento": "^5.2.6",
     "@tailwindcss/vite": "^4.1.11",
+    "gsap": "^3.13.0",
     "tailwindcss": "^4.1.11",
+    "three": "^0.179.1",
     "vue": "^3.5.18"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
     "@types/node": "^24.1.0",
+    "@types/vue": "^2.0.0",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.32.0",

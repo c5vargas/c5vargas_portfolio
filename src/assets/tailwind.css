@@ -1,1 +1,45 @@
 @import 'tailwindcss';
+
+@theme {
+  --font-serif: 'Quattrocento', serif;
+}
+
+@theme {
+  --color-white: #fffaf3;
+  --color-black: #051010;
+  --color-primary: #99ff33;
+  --color-secondary: #8f7fff;
+  --color-accent: #ff5e5b;
+}
+
+@layer components {
+  .button {
+    @apply cursor-pointer rounded-full border border-transparent bg-transparent px-5 py-3 text-xs font-semibold uppercase transition-colors duration-300;
+    /* @apply hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-black)]; */
+    @apply hover:border-[var(--color-primary)] hover:ring hover:ring-[var(--color-primary)] hover:outline-none;
+    @apply focus:border-[var(--color-secondary)] focus:ring focus:ring-[var(--color-secondary)] focus:outline-none;
+  }
+
+  .glass {
+    @apply border border-white/20 backdrop-blur-md;
+    background-clip: padding-box;
+  }
+
+  .shiny-text {
+    color: transparent;
+    background-image: linear-gradient(120deg, #000, #777 40%, #fff 50%, #777 60%, #000);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 3s linear infinite;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 200% 0%;
+    }
+    100% {
+      background-position: -200% 0%;
+    }
+  }
+}
