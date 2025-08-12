@@ -1,4 +1,11 @@
 # 📦 Changelog
+### 0.0.20 (2025-08-12)
+
+
+### 🐛 Bug Fixes
+
+* removed prettier/prettier from eslint config ([485d6ac](https://github.com/c5vargas/c5vargas_portfolio/commit/485d6acba1f26bc5d1dabe90f88a97063afd5010))
+
 ### [0.0.19](https://github.com/c5vargas/vue3-scalable-kit/compare/v0.0.18...v0.0.19) (2025-07-31)
 
 
