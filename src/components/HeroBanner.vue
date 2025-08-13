@@ -9,7 +9,7 @@
       <span class="hero-subtitle">Código limpio, diseño funcional, impacto real 🚀</span>
       <div>
         <h1
-          class="mx-auto mt-5 mb-20 font-serif text-[5rem] leading-none md:px-10 md:text-[9rem] 2xl:w-1/2"
+          class="mx-auto mt-5 mb-20 font-serif text-[5rem] leading-none lg:px-10 lg:text-[9rem] 2xl:w-1/2"
         >
           Hacer cosas increíbles
           <span class="text-primary italic">es mi rutina</span>
@@ -22,7 +22,7 @@
           class="button group glass flex items-center gap-5 text-sm"
           href="mailto:carles@carvar.es"
         >
-          <div class="shiny-text inline-block">Let's work together</div>
+          <div class="shiny-text inline-block">Conectar ahora</div>
           <ArrowUpRight class="w-5 animate-pulse text-primary group-active:text-secondary" />
         </a>
       </div>
