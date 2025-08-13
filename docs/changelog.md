@@ -1,4 +1,11 @@
 # 📦 Changelog
+### [0.0.21](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.20...v0.0.21) (2025-08-13)
+
+
+### ✨ Features
+
+* add HeroBanner styles and threeJs dependencies on HeroBannerBackground ([366c31c](https://github.com/c5vargas/c5vargas_portfolio/commit/366c31ce1fcd77477b4fe9dba00c556d322ec047))
+* update HeroBanner and HeroBannerBackground components with improved mouse interaction and styling ([f86c89e](https://github.com/c5vargas/c5vargas_portfolio/commit/f86c89e1d79f5416295e288f9a358938824ab4ea))
 
 ### 0.0.20 (2025-08-12)
 
