@@ -5,5 +5,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
-  "html.format.enable": false
+  "html.format.enable": false,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }

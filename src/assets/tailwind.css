@@ -15,9 +15,8 @@
 @layer components {
   .button {
     @apply cursor-pointer rounded-full border border-transparent bg-transparent px-5 py-3 text-xs font-semibold uppercase transition-colors duration-300;
-    /* @apply hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-black)]; */
-    @apply hover:border-[var(--color-primary)] hover:ring hover:ring-[var(--color-primary)] hover:outline-none;
-    @apply focus:border-[var(--color-secondary)] focus:ring focus:ring-[var(--color-secondary)] focus:outline-none;
+    @apply hover:border-[var(--color-primary)] hover:outline-none;
+    @apply focus:border-[var(--color-secondary)] focus:outline-none;
   }
 
   .glass {

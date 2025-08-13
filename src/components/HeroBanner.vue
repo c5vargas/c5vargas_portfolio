@@ -17,9 +17,13 @@
       </div>
 
       <div class="relative inline-block">
-        <a class="button glass flex items-center gap-5 text-sm" href="#">
+        <a
+          ref="btn"
+          class="button group glass flex items-center gap-5 text-sm"
+          href="mailto:carles@carvar.es"
+        >
           <div class="shiny-text inline-block">Let's work together</div>
-          <ArrowUpRight class="w-5 animate-pulse text-primary" />
+          <ArrowUpRight class="w-5 animate-pulse text-primary group-active:text-secondary" />
         </a>
       </div>
     </div>
@@ -30,18 +34,53 @@
 import { gsap } from 'gsap'
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { onMounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import ArrowUpRight from './icons/ArrowUpRight.vue'
 import HeroBannerBackground from './HeroBannerBackground.vue'
 
+const btn = ref<HTMLElement | null>(null)
+
 gsap.registerPlugin(ScrollTrigger)
 
+function handleMove(e: MouseEvent) {
+  const rect = btn.value!.getBoundingClientRect()
+  const x = (e.clientX - rect.left - rect.width / 2) * 0.2
+  const y = (e.clientY - rect.top - rect.height / 2) * 0.2
+
+  gsap.to(btn.value, {
+    x,
+    y,
+    duration: 0.5,
+    ease: 'power2.out',
+  })
+}
+
+function reset() {
+  gsap.to(btn.value, { x: 0, y: 0, duration: 0.5, ease: 'power2.out' })
+}
+
 onMounted(() => {
-  gsap.from(['h1', 'span'], {
+  gsap.from('h1', {
     duration: 1,
-    y: -50,
+    y: 50,
     opacity: 0,
     ease: 'power2.out',
   })
+
+  gsap.from(['span', 'a'], {
+    duration: 1,
+    x: -50,
+    opacity: 0,
+    ease: 'power2.out',
+    delay: 0.2,
+  })
+
+  btn.value?.addEventListener('mousemove', handleMove)
+  btn.value?.addEventListener('mouseleave', reset)
+})
+
+onUnmounted(() => {
+  btn.value?.removeEventListener('mousemove', handleMove)
+  btn.value?.removeEventListener('mouseleave', reset)
 })
 </script>
