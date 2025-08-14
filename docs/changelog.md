@@ -1,4 +1,12 @@
 # 📦 Changelog
+### [0.0.22](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.21...v0.0.22) (2025-08-14)
+
+
+### ✨ Features
+
+* add MainHeader component and update HeroBanner styles for improved layout and localization ([86f69b2](https://github.com/c5vargas/c5vargas_portfolio/commit/86f69b2cca8e578e116ed4df55d3ce0416dc1fae))
+* enhance MainHeader and MenuBurger components with improved menu functionality and animations ([45df563](https://github.com/c5vargas/c5vargas_portfolio/commit/45df5633bc7fb5bfba451b5d65130492447156c0))
+
 ### [0.0.21](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.20...v0.0.21) (2025-08-13)
 
 
