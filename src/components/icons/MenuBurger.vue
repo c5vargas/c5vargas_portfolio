@@ -4,7 +4,6 @@
     viewBox="0 0 50 50"
     width="30"
     height="30"
-    class="fixed top-2 right-5 z-50 block cursor-pointer md:top-2 md:right-1/2"
     fill="none"
     stroke="#fff"
     stroke-linecap="round"
@@ -14,11 +13,6 @@
       <path class="stage-one" d="M12,8c0,0,2.2,0,13,0s13,0,13,0"></path>
       <path class="stage-two" d="M12,42c0,0,2.2,0,13,0s13,0,13,0"></path>
       <line class="stage-line" x1="5" y1="25" x2="45" y2="25"></line>
-    </g>
-
-    <g id="end" style="display: none">
-      <path class="end-one" d="M38,12L25,25.3L12,12"></path>
-      <path class="end-two" d="M12,38l13-12.7L38,38"></path>
     </g>
   </svg>
 </template>
@@ -34,7 +28,7 @@ const { isOpen } = defineProps<{
 watch(
   () => isOpen,
   newValue => {
-    if (!newValue) {
+    if (newValue) {
       // Animación hamburguesa → X
       gsap.to('.stage-one', { duration: 0.3, attr: { d: 'M38,12L25,25.3L12,12' } })
       gsap.to('.stage-two', { duration: 0.3, attr: { d: 'M12,38l13-12.7L38,38' } })
