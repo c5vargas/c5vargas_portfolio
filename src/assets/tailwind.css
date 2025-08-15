@@ -24,6 +24,10 @@
     background-clip: padding-box;
   }
 
+  .animation-link {
+    @apply relative font-semibold transition-colors duration-500 before:absolute before:-left-3 before:opacity-0 before:transition-all before:content-['<'] after:absolute after:-right-3 after:opacity-0 after:transition-all after:content-['/>'] hover:before:-left-6 hover:before:opacity-100 hover:after:-right-6 hover:after:opacity-100;
+  }
+
   .shiny-text {
     color: transparent;
     background-image: linear-gradient(120deg, #000, #777 40%, #fff 50%, #777 60%, #000);

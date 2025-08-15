@@ -1,20 +1,34 @@
 <template>
-  <header class="fixed z-30 w-full">
+  <!-- Overlay -->
+  <div
+    v-show="menuIsOpen"
+    ref="overlay"
+    class="fixed inset-0 z-30 bg-black/40 backdrop-blur-xs"
+    @click="closeMenu"
+  />
+
+  <!-- Header -->
+  <header class="fixed z-30 w-full" :class="menuIsOpen ? 'glass' : 'bg-transparent'">
     <main class="container mx-auto flex items-center gap-6 p-4">
+      <!-- Logo -->
       <div class="glass flex h-12 items-center justify-center rounded-2xl px-5">
         <span class="font-serif font-bold text-white">Carles Vargas</span>
       </div>
 
-      <div class="glass hidden h-12 items-center justify-center gap-2 rounded-2xl px-5 sm:flex">
+      <!-- Status -->
+      <div
+        class="glass hidden h-12 items-center justify-center gap-2 rounded-2xl px-5 transition-all duration-500 sm:flex"
+        :class="menuIsOpen ? 'opacity-0' : 'opacity-100'"
+      >
         <span class="status h-1.5 w-1.5 rounded-full bg-green-500"></span>
         <span class="text-xs text-gray-300">Disponible para proyectos</span>
       </div>
 
+      <!-- Menu toggle -->
       <nav class="relative ms-auto">
         <button
-          ref="toggleBtn"
           class="cursor-pointer"
-          @click="toggleNavbar"
+          @click="toggleMenu"
           :aria-expanded="menuIsOpen"
           aria-controls="primary-menu"
           title="Abrir menú de navegación"
@@ -24,89 +38,78 @@
       </nav>
     </main>
 
-    <div v-show="menuIsOpen" class="fixed inset-0 z-40 bg-black/40" @click="closeMenu" />
-
+    <!-- Nav menu -->
     <div
       id="primary-menu"
       ref="menu"
       :aria-hidden="!menuIsOpen"
-      class="fixed top-0 right-0 left-0 z-50 bg-gray-800 shadow-lg will-change-transform"
+      class="z-50 pt-12 will-change-transform"
       :class="menuIsOpen ? 'pointer-events-auto' : 'pointer-events-none'"
     >
       <div class="container mx-auto p-6">
-        <ul class="flex items-center gap-4 text-lg text-white">
-          <li><a href="#" @click="closeMenu" class="hover:opacity-80">Inicio</a></li>
-          <li><a href="#" @click="closeMenu" class="hover:opacity-80">Proyectos</a></li>
-          <li><a href="#" @click="closeMenu" class="hover:opacity-80">Contacto</a></li>
+        <!-- Navigation links -->
+        <ul
+          class="group flex max-w-1/2 flex-wrap items-center gap-3 text-lg text-white md:gap-8 group-hover:[&>li]:opacity-60"
+        >
+          <li
+            v-for="item in navItems"
+            :key="item.label"
+            class="list-item transition-all duration-300 group-hover:blur-[3px] hover:opacity-100 hover:blur-none"
+          >
+            <button
+              @click="closeMenu"
+              class="font-serif text-[2rem] leading-0 uppercase md:text-[4rem]"
+            >
+              {{ item.label }}
+            </button>
+          </li>
         </ul>
+
+        <!-- Social links -->
+        <div
+          class="mt-5 flex max-w-1/2 list-none flex-wrap px-5 md:mt-10 md:px-10 lg:justify-between"
+        >
+          <span class="mt-5 w-full text-xs opacity-60 lg:w-auto">RRSS</span>
+
+          <ul
+            v-for="social in socialLinks"
+            :key="social.label"
+            class="mt-2 w-1/2 md:mt-5 md:w-1/4 lg:w-auto"
+          >
+            <li class="highlight-black text-sm font-semibold hover:opacity-90">
+              <a
+                class="animation-link text-white"
+                :href="social.href"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ social.label }}
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
-import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 import MenuBurger from './icons/MenuBurger.vue'
-import gsap from 'gsap'
+import { useNavbarMenu } from '@/composables/useNavbarMenu'
 
-const toggleBtn = ref<HTMLElement | null>(null)
-const menu = ref<HTMLElement | null>(null)
-const menuIsOpen = ref<boolean>(false)
+const { menuIsOpen, menu, overlay, toggleMenu, closeMenu } = useNavbarMenu()
 
-// Timeline tipada y scoping seguro
-const tl = ref<gsap.core.Timeline | null>(null)
-let ctx: ReturnType<typeof gsap.context> | null = null
+const navItems = [
+  { label: '✤ Inicio' },
+  { label: 'Experiencia' },
+  { label: 'Proyectos' },
+  { label: 'Contacto' },
+]
 
-const openMenu = () => {
-  if (!tl.value) return
-  menuIsOpen.value = true
-  tl.value.play()
-}
-
-const closeMenu = () => {
-  if (!tl.value) return
-  tl.value.reverse()
-  menuIsOpen.value = false
-}
-
-const toggleNavbar = () => {
-  if (menuIsOpen.value) {
-    closeMenu()
-  } else {
-    openMenu()
-  }
-}
-
-// Bloqueo de scroll del documento
-watch(menuIsOpen, open => {
-  document.documentElement.classList.toggle('overflow-hidden', open)
-})
-
-const onKeydown = (e: KeyboardEvent) => {
-  if (e.key === 'Escape' && menuIsOpen.value) closeMenu()
-}
-
-onMounted(() => {
-  window.addEventListener('keydown', onKeydown)
-
-  ctx = gsap.context(() => {
-    if (!menu.value) return
-
-    // Estado inicial: panel oculto arriba
-    gsap.set(menu.value, { yPercent: -100, autoAlpha: 0 })
-
-    // Timeline: open ↓ / reverse ↑
-    tl.value = gsap
-      .timeline({
-        paused: true,
-        defaults: { duration: 0.35, ease: 'power2.out' },
-      })
-      .to(menu.value, { yPercent: 0, autoAlpha: 1 }, 0)
-  })
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('keydown', onKeydown)
-  ctx?.revert()
-})
+const socialLinks = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/carles-vargas/' },
+  { label: 'GitHub', href: 'https://github.com/c5vargas' },
+  { label: 'Threads', href: 'https://www.threads.com/@c5vargas' },
+  { label: 'Email', href: 'mailto:carles@carvar.es' },
+]
 </script>
