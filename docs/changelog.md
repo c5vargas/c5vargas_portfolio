@@ -1,4 +1,27 @@
 # 📦 Changelog
+### 0.0.23 (2025-08-15)
+
+
+### 🐛 Bug Fixes
+
+* removed prettier/prettier from eslint config ([485d6ac](https://github.com/c5vargas/c5vargas_portfolio/commit/485d6acba1f26bc5d1dabe90f88a97063afd5010))
+
+
+### 🔧 Chores
+
+* **release:** 0.0.20 ([cc6d7f3](https://github.com/c5vargas/c5vargas_portfolio/commit/cc6d7f3306995de393c3cd425f04af4379471ad3))
+* **release:** 0.0.21 ([03de5b3](https://github.com/c5vargas/c5vargas_portfolio/commit/03de5b340484794f61ffd81354c023dddb59021d))
+* **release:** 0.0.22 ([7fd6327](https://github.com/c5vargas/c5vargas_portfolio/commit/7fd6327eba8535b921d26b0cc8029f4105784caf))
+
+
+### ✨ Features
+
+* add HeroBanner styles and threeJs dependencies on HeroBannerBackground ([366c31c](https://github.com/c5vargas/c5vargas_portfolio/commit/366c31ce1fcd77477b4fe9dba00c556d322ec047))
+* add MainHeader component and update HeroBanner styles for improved layout and localization ([86f69b2](https://github.com/c5vargas/c5vargas_portfolio/commit/86f69b2cca8e578e116ed4df55d3ce0416dc1fae))
+* add split-type dependency and implement useNavbarMenu composable for enhanced menu functionality ([f06ab7f](https://github.com/c5vargas/c5vargas_portfolio/commit/f06ab7fa916d6c6903147670c84309468e7762d9))
+* enhance MainHeader and MenuBurger components with improved menu functionality and animations ([45df563](https://github.com/c5vargas/c5vargas_portfolio/commit/45df5633bc7fb5bfba451b5d65130492447156c0))
+* update HeroBanner and HeroBannerBackground components with improved mouse interaction and styling ([f86c89e](https://github.com/c5vargas/c5vargas_portfolio/commit/f86c89e1d79f5416295e288f9a358938824ab4ea))
+
 ### [0.0.22](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.21...v0.0.22) (2025-08-14)
 
 
