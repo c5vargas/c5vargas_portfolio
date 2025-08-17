@@ -11,9 +11,7 @@
   <header class="fixed z-30 w-full" :class="menuIsOpen ? 'glass' : 'bg-transparent'">
     <main class="container mx-auto flex items-center gap-6 p-4">
       <!-- Logo -->
-      <div class="glass flex h-12 items-center justify-center rounded-2xl px-5">
-        <span class="font-serif font-bold text-white">Carles Vargas</span>
-      </div>
+      <img src="/logo-cream.svg" alt="Logo" class="w-20 duration-200 hover:scale-110" />
 
       <!-- Status -->
       <div
