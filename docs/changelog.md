@@ -1,4 +1,16 @@
 # 📦 Changelog
+### [0.0.25](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.24...v0.0.25) (2025-08-17)
+
+
+### ♻️ Code Refactoring
+
+* replace logo text with logo image in MainHeader component ([07758fc](https://github.com/c5vargas/c5vargas_portfolio/commit/07758fc83e379316707191e031d25c9e30fc55e8))
+
+
+### ✨ Features
+
+* add ScrollingText component and implemented smooth scroll on tailwind.css ([374c215](https://github.com/c5vargas/c5vargas_portfolio/commit/374c215c984795d832506503e807e077b2a3c97e))
+
 ### [0.0.24](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.23...v0.0.24) (2025-08-15)
 
 ### 0.0.23 (2025-08-15)
