@@ -17,8 +17,8 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  baseSpeed: 30,
-  scrollSpeedIncrement: 5,
+  baseSpeed: 120,
+  scrollSpeedIncrement: 60,
 })
 
 const textRef = ref<HTMLElement | null>(null)
@@ -38,7 +38,7 @@ const animateText = () => {
     x: currentDirection === 'left' ? `-=${totalWidth}` : `+=${totalWidth}`,
     duration: speed.value,
     repeat: -1,
-    ease: 'none',
+    ease: 'power2.out',
     modifiers: {
       x: gsap.utils.unitize(x => parseFloat(x) % totalWidth),
     },

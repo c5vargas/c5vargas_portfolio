@@ -9,7 +9,7 @@ import ScrollingText from './components/ScrollingText.vue'
   <HeroBanner />
   <ScrollingText
     text="Hola Devs, soy Carles Vargas | Hola Devs, soy Carles Vargas | Hola Devs, soy Carles Vargas"
-    class="padding-20 text-[5rem]"
+    class="padding-20 font-serif text-[6rem] italic"
   />
 
   <div class="my-20">
