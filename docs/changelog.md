@@ -1,4 +1,30 @@
 # 📦 Changelog
+### [0.0.26](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.22...v0.0.26) (2025-08-18)
+
+
+### ♻️ Code Refactoring
+
+* replace logo text with logo image in MainHeader component ([07758fc](https://github.com/c5vargas/c5vargas_portfolio/commit/07758fc83e379316707191e031d25c9e30fc55e8))
+
+
+### ✨ Features
+
+* add ScrollingText component and implemented smooth scroll on tailwind.css ([374c215](https://github.com/c5vargas/c5vargas_portfolio/commit/374c215c984795d832506503e807e077b2a3c97e))
+* add split-type dependency and implement useNavbarMenu composable for enhanced menu functionality ([f06ab7f](https://github.com/c5vargas/c5vargas_portfolio/commit/f06ab7fa916d6c6903147670c84309468e7762d9))
+
+
+### 🔧 Chores
+
+* **release:** 0.0.23 ([4a5a7df](https://github.com/c5vargas/c5vargas_portfolio/commit/4a5a7df1f1fe377744cb81362067eaba4df2edfe))
+* **release:** 0.0.24 ([b6d12b9](https://github.com/c5vargas/c5vargas_portfolio/commit/b6d12b9e6f629e2af3a2136921d05367e2926165))
+* **release:** 0.0.25 ([a31ce3d](https://github.com/c5vargas/c5vargas_portfolio/commit/a31ce3d3eae64cf1e22e8e1db352f18cae653bb0))
+
+
+### 🐛 Bug Fixes
+
+* improvements on ScrollingText component ([ab663ca](https://github.com/c5vargas/c5vargas_portfolio/commit/ab663ca43f04e1e45d6b4aaffb150be511eb6e6a))
+* **style:** header collapses height adjusted to logo and menu toggle ([cf19fbd](https://github.com/c5vargas/c5vargas_portfolio/commit/cf19fbdf00df45b6d953f1e66a1f6d990d13d822))
+
 ### [0.0.25](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.24...v0.0.25) (2025-08-17)
 
 
