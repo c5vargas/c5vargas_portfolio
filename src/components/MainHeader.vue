@@ -8,7 +8,7 @@
   />
 
   <!-- Header -->
-  <header class="fixed z-30 w-full" :class="menuIsOpen ? 'glass' : 'bg-transparent'">
+  <header class="fixed z-30 h-28 w-full" :class="menuIsOpen ? 'glass h-auto' : ''">
     <main class="container mx-auto flex items-center gap-6 p-4">
       <!-- Logo -->
       <img src="/logo-cream.svg" alt="Logo" class="w-20 duration-200 hover:scale-110" />
