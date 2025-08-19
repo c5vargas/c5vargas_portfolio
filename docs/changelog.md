@@ -1,4 +1,14 @@
 # 📦 Changelog
+### [0.0.27](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.26...v0.0.27) (2025-08-19)
+
+
+### ✨ Features
+
+* added BrandMarquee component to show scroll text visuals ([b020687](https://github.com/c5vargas/c5vargas_portfolio/commit/b02068760415af5d27fe35e93dedecf56063e8fc))
+* **gsap:** add composable to initialize gsap safety ([ad410f3](https://github.com/c5vargas/c5vargas_portfolio/commit/ad410f3cc3e452bef3fccd529cd34dd1abb73b77))
+* **icons:** added software collection icons ([c149db7](https://github.com/c5vargas/c5vargas_portfolio/commit/c149db7a9abc7a31a0756daab2b783da0574f94e))
+* **tools:** designed tools section component and added animations ([9dd331c](https://github.com/c5vargas/c5vargas_portfolio/commit/9dd331c9ad7f5c4b00c35be579421c17cf60d9ca))
+
 ### [0.0.26](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.22...v0.0.26) (2025-08-18)
 
 
