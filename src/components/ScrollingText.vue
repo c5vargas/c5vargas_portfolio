@@ -14,19 +14,25 @@ interface Props {
   text: string
   baseSpeed?: number
   scrollSpeedIncrement?: number
+  startDirection?: 'left' | 'right'
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  baseSpeed: 120,
-  scrollSpeedIncrement: 60,
+  baseSpeed: 180,
+  scrollSpeedIncrement: 100,
+  startDirection: 'left',
 })
 
 const textRef = ref<HTMLElement | null>(null)
 let animation: gsap.core.Tween | null = null
 let lastScrollY = window.scrollY
 let scrollTimeout: number | null = null
-let currentDirection: 'left' | 'right' = 'left'
+let currentDirection: 'left' | 'right' = props.startDirection
 const speed = ref(props.baseSpeed)
+
+const toggleDirection = () => {
+  currentDirection = currentDirection === 'left' ? 'right' : 'left'
+}
 
 const animateText = () => {
   if (!textRef.value) return
@@ -48,7 +54,12 @@ const animateText = () => {
 const handleScroll = () => {
   const currentScrollY = window.scrollY
   const scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up'
-  currentDirection = scrollDirection === 'up' ? 'right' : 'left'
+
+  if (scrollDirection === 'up') {
+    toggleDirection()
+  } else {
+    currentDirection = props.startDirection
+  }
 
   // Aumenta la velocidad
   speed.value = Math.max(1, props.baseSpeed - props.scrollSpeedIncrement)

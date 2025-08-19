@@ -2,7 +2,7 @@
 
 @theme {
   --color-white: #fffaf3;
-  --color-black: #051010;
+  --color-black: #031113;
   --color-primary: #99ff33;
   --color-secondary: #8f7fff;
   --color-accent: #ff5e5b;
@@ -29,6 +29,10 @@
 
   .animation-link {
     @apply relative font-semibold transition-colors duration-500 before:absolute before:-left-3 before:opacity-0 before:transition-all before:content-['<'] after:absolute after:-right-3 after:opacity-0 after:transition-all after:content-['/>'] hover:before:-left-6 hover:before:opacity-100 hover:after:-right-6 hover:after:opacity-100;
+  }
+
+  .shade-in {
+    box-shadow: inset 0 25px 25px -25px #1d1d1d;
   }
 
   .shiny-text {

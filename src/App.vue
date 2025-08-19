@@ -1,16 +1,13 @@
 <script setup lang="ts">
+import BrandMarquee from './components/BrandMarquee.vue'
 import HeroBanner from './components/HeroBanner.vue'
 import MainHeader from './components/MainHeader.vue'
-import ScrollingText from './components/ScrollingText.vue'
 </script>
 
 <template>
   <MainHeader />
   <HeroBanner />
-  <ScrollingText
-    text="Hola Devs, soy Carles Vargas | Hola Devs, soy Carles Vargas | Hola Devs, soy Carles Vargas"
-    class="padding-20 font-serif text-[6rem] italic"
-  />
+  <BrandMarquee />
 
   <div class="my-20">
     <p>
