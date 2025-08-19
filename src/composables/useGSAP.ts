@@ -1,4 +1,3 @@
-// composables/useGSAP.ts
 import { ref, onMounted, onUnmounted } from 'vue'
 import gsap from 'gsap'
 
