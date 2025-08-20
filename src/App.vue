@@ -5,6 +5,7 @@ import BrandMarquee from './components/BrandMarquee.vue'
 import HeroBanner from './components/HeroBanner.vue'
 import MainHeader from './components/MainHeader.vue'
 import ToolsSection from './components/ToolsSection.vue'
+import WorkDone from './components/WorkDone.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 </script>
@@ -14,4 +15,5 @@ gsap.registerPlugin(ScrollTrigger)
   <HeroBanner />
   <BrandMarquee />
   <ToolsSection />
+  <WorkDone />
 </template>

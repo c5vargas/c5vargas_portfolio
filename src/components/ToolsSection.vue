@@ -14,13 +14,16 @@
 
     <div class="relative z-10 flex h-1/2 flex-col items-center justify-center gap-3 text-center">
       <p class="text-lg text-gray-200 md:text-xl">Stack de desarrollo profesional</p>
-      <span class="will-fade block text-5xl font-semibold text-gray-300 opacity-0 md:text-[5em]"
+      <span
+        class="will-fade block text-4xl font-semibold text-gray-50 opacity-0 text-shadow-lg/30 sm:text-5xl md:text-[5em]"
         >+6 años</span
       >
-      <span class="will-fade block text-5xl font-semibold text-gray-300 opacity-0 md:text-[5em]"
+      <span
+        class="will-fade block text-4xl font-semibold text-gray-50 opacity-0 text-shadow-lg/30 sm:text-5xl md:text-[5em]"
         >+3150 commits</span
       >
-      <span class="will-fade block text-5xl font-semibold text-gray-300 opacity-0 md:text-[5em]"
+      <span
+        class="will-fade block text-4xl font-semibold text-gray-50 opacity-0 text-shadow-lg/30 sm:text-5xl md:text-[5em]"
         >+1M interacciones</span
       >
     </div>
