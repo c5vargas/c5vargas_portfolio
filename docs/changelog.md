@@ -1,4 +1,32 @@
 # 📦 Changelog
+### [0.0.30](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.25...v0.0.30) (2025-08-20)
+
+
+### 🔧 Chores
+
+* **release:** 0.0.26 ([c1799d8](https://github.com/c5vargas/c5vargas_portfolio/commit/c1799d81b687479f136d6d74cfe7ffc213a6f203))
+* **release:** 0.0.27 ([812f4b8](https://github.com/c5vargas/c5vargas_portfolio/commit/812f4b8cf67e2095352727b3e1e56fa7ad235b81))
+* **release:** 0.0.28 ([72df849](https://github.com/c5vargas/c5vargas_portfolio/commit/72df84964763bcf61c059ed6ccd80c4de328bf0e))
+* **release:** 0.0.29 ([e9b1494](https://github.com/c5vargas/c5vargas_portfolio/commit/e9b14940a15ad1493637d694fde703337d541b2f))
+
+
+### 🐛 Bug Fixes
+
+* improvements on ScrollingText component ([ab663ca](https://github.com/c5vargas/c5vargas_portfolio/commit/ab663ca43f04e1e45d6b4aaffb150be511eb6e6a))
+* **responsive:** adjusted hero title and navigation on small devices ([2e05fd2](https://github.com/c5vargas/c5vargas_portfolio/commit/2e05fd2569d917dab7f37386baaeef732f6bdd37))
+* **style:** header collapses height adjusted to logo and menu toggle ([cf19fbd](https://github.com/c5vargas/c5vargas_portfolio/commit/cf19fbdf00df45b6d953f1e66a1f6d990d13d822))
+
+
+### ✨ Features
+
+* add WorkDone section to display portfolio elements ([22e70c2](https://github.com/c5vargas/c5vargas_portfolio/commit/22e70c2ba119cb3ecbcc81723a7caf841719ef2c))
+* added BrandMarquee component to show scroll text visuals ([b020687](https://github.com/c5vargas/c5vargas_portfolio/commit/b02068760415af5d27fe35e93dedecf56063e8fc))
+* **components:** improvements on BrandMarquee and ToolSections animations ([0f51ed3](https://github.com/c5vargas/c5vargas_portfolio/commit/0f51ed330240582f86a1dbdee0620da2c318d235))
+* **gsap:** add composable to initialize gsap safety ([ad410f3](https://github.com/c5vargas/c5vargas_portfolio/commit/ad410f3cc3e452bef3fccd529cd34dd1abb73b77))
+* **icons:** added software collection icons ([c149db7](https://github.com/c5vargas/c5vargas_portfolio/commit/c149db7a9abc7a31a0756daab2b783da0574f94e))
+* integrate useGSAP hook in components, replacing onMounted animations ([9a82b79](https://github.com/c5vargas/c5vargas_portfolio/commit/9a82b797a8f60fdbe8f583ca35fa93a367a420db))
+* **tools:** designed tools section component and added animations ([9dd331c](https://github.com/c5vargas/c5vargas_portfolio/commit/9dd331c9ad7f5c4b00c35be579421c17cf60d9ca))
+
 ### [0.0.29](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.28...v0.0.29) (2025-08-20)
 
 
