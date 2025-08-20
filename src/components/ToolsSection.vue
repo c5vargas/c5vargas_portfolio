@@ -1,5 +1,5 @@
 <template>
-  <section id="tools" class="relative flex h-[992px] items-center justify-center">
+  <section ref="containerRef" class="relative flex h-[992px] items-center justify-center">
     <div class="absolute inset-0 flex items-center justify-center">
       <div class="relative grid h-full w-full max-w-5xl grid-cols-3 gap-12 md:grid-cols-4">
         <component
@@ -28,9 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import {
   CapacitorIcon,
   CloudflareIcon,
@@ -42,8 +40,10 @@ import {
   TypescriptIcon,
   VuejsIcon,
 } from '@/components/icons/software'
+import { useGSAP } from 'gsap-vue'
+import { ref } from 'vue'
 
-gsap.registerPlugin(ScrollTrigger)
+const containerRef = ref<HTMLElement | null>(null)
 
 const tools = [
   { component: CapacitorIcon, position: 'absolute top-24 left-12' },
@@ -57,41 +57,44 @@ const tools = [
   { component: VuejsIcon, position: 'absolute top-14 right-1/3' },
 ]
 
-onMounted(() => {
-  const fadeElements = gsap.utils.toArray<HTMLElement>('.will-fade')
-  const floatingElements = gsap.utils.toArray<HTMLElement>('.floating-element')
+useGSAP(
+  () => {
+    const fadeElements = gsap.utils.toArray<HTMLElement>('.will-fade')
+    const floatingElements = gsap.utils.toArray<HTMLElement>('.floating-element')
 
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: '#tools',
-        start: 'top top',
-        end: '+=' + fadeElements.length * 300,
-        pin: true,
-        scrub: true,
-      },
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: containerRef.value,
+          start: 'top top',
+          end: '+=' + fadeElements.length * 300,
+          pin: true,
+          scrub: true,
+        },
+      })
+      .fromTo(
+        fadeElements,
+        { opacity: 0, y: 100 },
+        { opacity: 1, y: 0, stagger: 1, ease: 'power2.out' }
+      )
+
+    floatingElements.forEach(el => {
+      gsap.fromTo(
+        el,
+        { scale: 0.2, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 1.5, ease: 'power1.inOut' }
+      )
+
+      gsap.to(el, {
+        x: gsap.utils.random(-100, 100),
+        y: gsap.utils.random(-100, 100),
+        duration: 10,
+        repeat: -1,
+        yoyo: true,
+        ease: 'none',
+      })
     })
-    .fromTo(
-      fadeElements,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, stagger: 1, ease: 'power2.out' }
-    )
-
-  floatingElements.forEach(el => {
-    gsap.fromTo(
-      el,
-      { scale: 0.2, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 1.5, ease: 'power1.inOut' }
-    )
-
-    gsap.to(el, {
-      x: gsap.utils.random(-100, 100),
-      y: gsap.utils.random(-100, 100),
-      duration: 10,
-      repeat: -1,
-      yoyo: true,
-      ease: 'none',
-    })
-  })
-})
+  },
+  { scope: containerRef }
+)
 </script>

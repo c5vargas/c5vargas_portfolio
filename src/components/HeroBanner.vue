@@ -1,5 +1,5 @@
 <template>
-  <section class="relative h-screen overflow-hidden">
+  <section ref="hero" class="relative h-screen overflow-hidden">
     <div class="absolute top-0 left-0 h-full w-full overflow-hidden bg-gray-950">
       <HeroBannerBackground />
     </div>
@@ -32,15 +32,33 @@
 
 <script setup lang="ts">
 import { gsap } from 'gsap'
-
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from 'gsap-vue'
 import { onMounted, onUnmounted, ref } from 'vue'
 import ArrowUpRight from './icons/ArrowUpRight.vue'
 import HeroBannerBackground from './HeroBannerBackground.vue'
 
+const hero = ref<HTMLElement | null>(null)
 const btn = ref<HTMLElement | null>(null)
 
-gsap.registerPlugin(ScrollTrigger)
+useGSAP(
+  () => {
+    gsap.from('h1', {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      ease: 'power2.out',
+    })
+
+    gsap.from(['span', 'a'], {
+      duration: 1,
+      x: -50,
+      opacity: 0,
+      ease: 'power2.out',
+      delay: 0.2,
+    })
+  },
+  { scope: hero }
+)
 
 function handleMove(e: MouseEvent) {
   const rect = btn.value!.getBoundingClientRect()
@@ -60,21 +78,6 @@ function reset() {
 }
 
 onMounted(() => {
-  gsap.from('h1', {
-    duration: 1,
-    y: 50,
-    opacity: 0,
-    ease: 'power2.out',
-  })
-
-  gsap.from(['span', 'a'], {
-    duration: 1,
-    x: -50,
-    opacity: 0,
-    ease: 'power2.out',
-    delay: 0.2,
-  })
-
   btn.value?.addEventListener('mousemove', handleMove)
   btn.value?.addEventListener('mouseleave', reset)
 })

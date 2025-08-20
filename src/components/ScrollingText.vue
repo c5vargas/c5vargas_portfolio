@@ -9,6 +9,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { gsap } from 'gsap'
+import { useGSAP } from 'gsap-vue'
 
 interface Props {
   text: string
@@ -61,7 +62,6 @@ const handleScroll = () => {
     currentDirection = props.startDirection
   }
 
-  // Aumenta la velocidad
   speed.value = Math.max(1, props.baseSpeed - props.scrollSpeedIncrement)
 
   if (animation) {
@@ -81,11 +81,17 @@ const handleScroll = () => {
   lastScrollY = currentScrollY
 }
 
+useGSAP(
+  () => {
+    if (textRef.value) {
+      gsap.set(textRef.value, { x: 0 })
+      animateText()
+    }
+  },
+  { scope: 'div' }
+)
+
 onMounted(() => {
-  if (textRef.value) {
-    gsap.set(textRef.value, { x: 0 })
-    animateText()
-  }
   window.addEventListener('scroll', handleScroll)
 })
 

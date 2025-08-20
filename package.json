@@ -21,6 +21,7 @@
     "@fontsource/quattrocento": "^5.2.6",
     "@tailwindcss/vite": "^4.1.11",
     "gsap": "^3.13.0",
+    "gsap-vue": "^0.2.3",
     "split-type": "^0.3.4",
     "tailwindcss": "^4.1.11",
     "three": "^0.179.1",
