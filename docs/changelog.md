@@ -1,4 +1,11 @@
 # 📦 Changelog
+### [0.0.28](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.27...v0.0.28) (2025-08-20)
+
+
+### ✨ Features
+
+* **components:** improvements on BrandMarquee and ToolSections animations ([0f51ed3](https://github.com/c5vargas/c5vargas_portfolio/commit/0f51ed330240582f86a1dbdee0620da2c318d235))
+
 ### [0.0.27](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.26...v0.0.27) (2025-08-19)
 
 
