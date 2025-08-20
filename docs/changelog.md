@@ -1,4 +1,11 @@
 # 📦 Changelog
+### [0.0.29](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.28...v0.0.29) (2025-08-20)
+
+
+### ✨ Features
+
+* integrate useGSAP hook in components, replacing onMounted animations ([9a82b79](https://github.com/c5vargas/c5vargas_portfolio/commit/9a82b797a8f60fdbe8f583ca35fa93a367a420db))
+
 ### [0.0.28](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.27...v0.0.28) (2025-08-20)
 
 
