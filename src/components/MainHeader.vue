@@ -48,7 +48,7 @@
         <div class="container mx-auto p-6">
           <!-- Navigation links -->
           <ul
-            class="group flex max-w-1/2 flex-wrap items-center gap-3 text-lg text-white md:gap-8 group-hover:[&>li]:opacity-60"
+            class="group flex flex-wrap items-center gap-3 text-lg text-white sm:max-w-1/2 md:gap-8 group-hover:[&>li]:opacity-60"
           >
             <li
               v-for="item in navItems"

@@ -9,7 +9,7 @@
       <span class="hero-subtitle">Código limpio, diseño funcional, impacto real 🚀</span>
       <div>
         <h1
-          class="mx-auto mt-5 mb-20 font-serif text-[5rem] leading-none lg:px-10 lg:text-[9rem] 2xl:w-1/2"
+          class="mx-auto mt-5 mb-20 font-serif text-[4rem] leading-none sm:text-[5rem] lg:px-10 lg:text-[9rem] 2xl:w-1/2"
         >
           Hacer cosas increíbles
           <span class="text-primary italic">es mi rutina</span>
