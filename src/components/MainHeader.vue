@@ -95,6 +95,7 @@
 
 <script setup lang="ts">
 import MenuBurger from './icons/MenuBurger.vue'
+import { socialLinks } from '@/libs/mock/socials'
 import { useNavbarMenu } from '@/composables/useNavbarMenu'
 
 const { menuIsOpen, menu, header, overlay, toggleMenu, closeMenu } = useNavbarMenu()
@@ -104,12 +105,5 @@ const navItems = [
   { label: 'Experiencia' },
   { label: 'Proyectos' },
   { label: 'Contacto' },
-]
-
-const socialLinks = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/carles-vargas/' },
-  { label: 'GitHub', href: 'https://github.com/c5vargas' },
-  { label: 'Threads', href: 'https://www.threads.com/@c5vargas' },
-  { label: 'Email', href: 'mailto:carles@carvar.es' },
 ]
 </script>
