@@ -1,19 +1,15 @@
 <script setup lang="ts">
 import { ScrollTrigger } from 'gsap/all'
+import { RouterView } from 'vue-router'
 import gsap from 'gsap'
-import BrandMarquee from './components/BrandMarquee.vue'
-import HeroBanner from './components/HeroBanner.vue'
 import MainHeader from './components/MainHeader.vue'
-import ToolsSection from './components/ToolsSection.vue'
-import WorkDone from './components/WorkDone.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 </script>
 
 <template>
   <MainHeader />
-  <HeroBanner />
-  <BrandMarquee />
-  <ToolsSection />
-  <WorkDone />
+  <main>
+    <RouterView />
+  </main>
 </template>

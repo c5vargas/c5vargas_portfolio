@@ -35,6 +35,21 @@
     box-shadow: inset 0 25px 25px -25px #1d1d1d;
   }
 
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: 'none';
+  }
+
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .shiny-text {
     color: transparent;
     background-image: linear-gradient(120deg, #000, #777 40%, #fff 50%, #777 60%, #000);

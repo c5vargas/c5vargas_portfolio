@@ -12,17 +12,21 @@
           v-for="item in portfolio"
           :key="item.id"
           role="option"
-          :aria-selected="workSelected?.id === item.id"
+          :aria-selected="workHovered?.id === item.id"
           class="transition-all duration-300 group-hover:opacity-40 hover:!opacity-100"
           @mouseenter="handleMouseEnter(item)"
         >
-          <span class="block w-full cursor-pointer text-left text-[8rem] font-bold">
+          <RouterLink
+            :to="`/proyecto/${item.slug}`"
+            class="block w-full cursor-pointer text-left text-[8rem] font-bold"
+          >
             {{ item.name }}
-          </span>
+          </RouterLink>
         </li>
       </ul>
 
       <div
+        ref="featuredImageRef"
         class="featured-image absolute top-0 right-10 h-[512px] w-[512px] overflow-hidden rounded-xl"
       >
         <img
@@ -41,59 +45,89 @@
 <script setup lang="ts">
 import portfolio, { Portfolio } from '@/libs/mock/portfolio'
 import gsap from 'gsap'
-import { ref, onMounted } from 'vue'
+import { useGSAP } from 'gsap-vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { RouterLink } from 'vue-router'
 
 const workRef = ref<HTMLElement | null>(null)
-const workSelected = ref<Portfolio | null>(null)
+const featuredImageRef = ref<HTMLElement | null>(null)
+const workHovered = ref<Portfolio | null>(null)
 const imageRefs = ref<HTMLImageElement[]>([])
 
-onMounted(() => {
-  // Inicializamos refs como array ordenado según portfolio
-  imageRefs.value = imageRefs.value.slice(0, portfolio.length)
-})
+const { contextSafe } = useGSAP(() => {}, { scope: workRef })
 
-const handleMouseEnter = (item: Portfolio) => {
-  const nextImg = getImage(item.id)
-  if (!nextImg) return
+const handleMouseEnter = (item: Portfolio) =>
+  contextSafe(() => {
+    const nextImg = getImage(item.id)
+    if (!nextImg) return
 
-  if (workSelected.value) {
-    const prevImg = getImage(workSelected.value.id)
-    if (prevImg) {
-      gsap.to(prevImg, {
-        opacity: 0,
-        y: -512,
-        duration: 0.5,
-        ease: 'power2.inOut',
-      })
+    if (workHovered.value) {
+      const prevImg = getImage(workHovered.value.id)
+      if (prevImg) {
+        gsap.to(prevImg, {
+          opacity: 0,
+          y: -512,
+          duration: 0.5,
+          ease: 'power2.inOut',
+        })
+      }
     }
-  }
 
-  gsap.fromTo(
-    nextImg,
-    { opacity: 1, y: 512 },
-    { opacity: 1, y: 0, duration: 0.5, ease: 'power2.inOut' }
-  )
+    gsap.fromTo(
+      nextImg,
+      { opacity: 1, y: 512 },
+      { opacity: 1, y: 0, duration: 0.5, ease: 'power2.inOut' }
+    )
 
-  workSelected.value = item
-}
+    workHovered.value = item
+  })
 
-const resetSelection = () => {
-  if (workSelected.value) {
-    const prevImg = getImage(workSelected.value.id)
-    if (prevImg) {
-      gsap.to(prevImg, {
-        opacity: 0,
-        y: -512,
-        duration: 0.5,
-        ease: 'power2.inOut',
-      })
+const resetSelection = () =>
+  contextSafe(() => {
+    if (workHovered.value) {
+      const prevImg = getImage(workHovered.value.id)
+      if (prevImg) {
+        gsap.to(prevImg, {
+          opacity: 0,
+          y: -512,
+          duration: 0.5,
+          ease: 'power2.inOut',
+        })
+      }
     }
-  }
-  workSelected.value = null
-}
+    workHovered.value = null
+  })
+
+const handleMouseMove = (e: MouseEvent) =>
+  contextSafe(() => {
+    if (!featuredImageRef.value || !workRef.value) return
+
+    const containerRect = workRef.value.getBoundingClientRect()
+    const relativeY = e.clientY - containerRect.top
+
+    gsap.to(featuredImageRef.value, {
+      y: relativeY - featuredImageRef.value.offsetHeight / 2,
+      duration: 1,
+      ease: 'power2.out',
+    })
+  })
 
 const getImage = (id: number) => {
   const index = portfolio.findIndex(p => p.id === id)
   return imageRefs.value[index] || null
 }
+
+onMounted(() => {
+  imageRefs.value = imageRefs.value.slice(0, portfolio.length)
+
+  if (workRef.value) {
+    workRef.value.addEventListener('mousemove', handleMouseMove)
+  }
+})
+
+onBeforeUnmount(() => {
+  if (workRef.value) {
+    workRef.value.removeEventListener('mousemove', handleMouseMove)
+  }
+})
 </script>
