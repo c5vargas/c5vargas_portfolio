@@ -1,4 +1,22 @@
 # 📦 Changelog
+### [0.0.31](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.29...v0.0.31) (2025-08-25)
+
+
+### 🐛 Bug Fixes
+
+* **responsive:** adjusted hero title and navigation on small devices ([2e05fd2](https://github.com/c5vargas/c5vargas_portfolio/commit/2e05fd2569d917dab7f37386baaeef732f6bdd37))
+
+
+### 🔧 Chores
+
+* **release:** 0.0.30 ([0b285cd](https://github.com/c5vargas/c5vargas_portfolio/commit/0b285cd9dcd783970a97bd53196039f091f1f3cb))
+
+
+### ✨ Features
+
+* add Footer and About components ([d052997](https://github.com/c5vargas/c5vargas_portfolio/commit/d0529977598b1d1e8fcd24f7e941f38e6ffc7eec))
+* add WorkDone section to display portfolio elements ([22e70c2](https://github.com/c5vargas/c5vargas_portfolio/commit/22e70c2ba119cb3ecbcc81723a7caf841719ef2c))
+
 ### [0.0.30](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.25...v0.0.30) (2025-08-20)
 
 
