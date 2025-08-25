@@ -1,4 +1,19 @@
 # 📦 Changelog
+### [0.0.32](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.30...v0.0.32) (2025-08-25)
+
+
+### 🔧 Chores
+
+* **release:** 0.0.31 ([f4a8375](https://github.com/c5vargas/c5vargas_portfolio/commit/f4a8375ced118720fdbca203e3a5ac76f119d7ac))
+
+
+### ✨ Features
+
+* add animations on ProjectPage ([abdc937](https://github.com/c5vargas/c5vargas_portfolio/commit/abdc9375499cf500944adf35bb526bc4472fa545))
+* add Footer and About components ([d052997](https://github.com/c5vargas/c5vargas_portfolio/commit/d0529977598b1d1e8fcd24f7e941f38e6ffc7eec))
+* add vue-router &  ProjectPage ([fffefac](https://github.com/c5vargas/c5vargas_portfolio/commit/fffefac2794a8c28868411f623e8d627a9a084fb))
+* improvements on Pages ([171ee8d](https://github.com/c5vargas/c5vargas_portfolio/commit/171ee8de1722684521f88f5e5fe0298ba932c1bd))
+
 ### [0.0.31](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.29...v0.0.31) (2025-08-25)
 
 
