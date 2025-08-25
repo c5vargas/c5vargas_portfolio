@@ -1,5 +1,5 @@
 <template>
-  <main ref="workRef" class="container mx-auto">
+  <main ref="workRef" class="container mx-auto py-20">
     <h2 class="font-serif text-[5rem] font-semibold">Últimos trabajos</h2>
 
     <div class="relative">

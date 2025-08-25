@@ -40,10 +40,12 @@ useGSAP(
       {
         rotate: 25,
         top: 120,
+        scale: 1,
       },
       {
-        rotate: 60,
+        rotate: 40,
         top: 240,
+        scale: 0.8,
       }
     )
 
@@ -52,10 +54,12 @@ useGSAP(
       {
         rotate: 25,
         bottom: 180,
+        scale: 1,
       },
       {
         rotate: 90,
-        bottom: 260,
+        bottom: 300,
+        scale: 0.8,
       }
     )
   },
