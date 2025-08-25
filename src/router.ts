@@ -1,6 +1,6 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
-import HomePage from './pages/HomePage.vue'
-import ProjectPage from './pages/ProjectPage.vue'
+import { createRouter, createWebHistory } from 'vue-router'
+import HomePage from '@/pages/HomePage.vue'
+import ProjectPage from '@/pages/ProjectPage.vue'
 
 const routes = [
   { path: '/', component: HomePage },
@@ -8,6 +8,9 @@ const routes = [
 ]
 
 export const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+  scrollBehavior() {
+    return { top: 0 }
+  },
 })
