@@ -1,4 +1,30 @@
 # 📦 Changelog
+### [0.0.33](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.31...v0.0.33) (2025-08-26)
+
+
+### 🐛 Bug Fixes
+
+* **animations:** removed contextSave on fn with params ([59450d6](https://github.com/c5vargas/c5vargas_portfolio/commit/59450d68b12fbd19e7bf215ccdc095c9cce6a805))
+
+
+### ✨ Features
+
+* add animations on ProjectPage ([abdc937](https://github.com/c5vargas/c5vargas_portfolio/commit/abdc9375499cf500944adf35bb526bc4472fa545))
+* add vue-router &  ProjectPage ([fffefac](https://github.com/c5vargas/c5vargas_portfolio/commit/fffefac2794a8c28868411f623e8d627a9a084fb))
+* improvements on Pages ([171ee8d](https://github.com/c5vargas/c5vargas_portfolio/commit/171ee8de1722684521f88f5e5fe0298ba932c1bd))
+* upgraded number of commits ([ab9f011](https://github.com/c5vargas/c5vargas_portfolio/commit/ab9f011e7b9affe0dd075dfb791d89664fd75eaf))
+
+
+### 🔧 Chores
+
+* **release:** 0.0.32 ([0b1e40d](https://github.com/c5vargas/c5vargas_portfolio/commit/0b1e40d56b013ff2b3c3b8b7307d58ba5d627834))
+* updated package.json ([795c6e8](https://github.com/c5vargas/c5vargas_portfolio/commit/795c6e838a2126ec5ff016ab919293fe242322ca))
+
+
+### ♻️ Code Refactoring
+
+* divide project page into components to separate responsibilities. ([62b4b9d](https://github.com/c5vargas/c5vargas_portfolio/commit/62b4b9d4a727efe7738facba2d902230b7c913de))
+
 ### [0.0.32](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.30...v0.0.32) (2025-08-25)
 
 
