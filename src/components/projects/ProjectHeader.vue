@@ -1,7 +1,5 @@
 <template>
-  <header
-    class="container mx-auto items-center px-4 pb-10 md:px-0 lg:flex lg:justify-between lg:pt-10"
-  >
+  <header class="container mx-auto items-center pb-10 lg:flex lg:justify-between lg:pt-10">
     <h1
       id="modal-title"
       class="col-span-12 font-serif text-[3rem] font-bold uppercase md:col-span-8 md:text-[8rem] lg:text-[10rem]"
@@ -14,7 +12,7 @@
         <li
           v-for="item in techStack"
           :key="item"
-          class="flex h-12 w-auto items-center rounded-full border border-gray-400 px-6"
+          class="flex h-12 w-auto cursor-pointer items-center rounded-full border border-gray-400 px-6 duration-300 hover:rotate-4"
         >
           <span class="mt-0.5 font-serif text-lg leading-6">{{ item }}</span>
         </li>

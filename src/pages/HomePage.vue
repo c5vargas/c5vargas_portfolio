@@ -10,6 +10,8 @@ import AboutSection from '@/components/AboutSection.vue'
   <HeroBanner />
   <BrandMarquee />
   <ToolsSection />
-  <WorkDone />
-  <AboutSection />
+  <div class="padding">
+    <WorkDone />
+    <AboutSection />
+  </div>
 </template>

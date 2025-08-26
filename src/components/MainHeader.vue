@@ -4,10 +4,14 @@
       v-show="menuIsOpen"
       ref="overlay"
       class="fixed inset-0 z-30 bg-black/40 backdrop-blur-xs"
-      @click="closeMenu"
+      @click="() => closeMenu()"
     />
 
-    <header class="fixed z-30 h-28 w-full" :class="menuIsOpen ? 'glass h-auto' : ''">
+    <header
+      id="main-header"
+      class="fixed z-30 h-28 w-full"
+      :class="menuIsOpen ? 'glass h-auto' : ''"
+    >
       <main class="container mx-auto flex items-center gap-6 p-4">
         <RouterLink to="/" title="Volver al inicio">
           <img src="/logo-cream.svg" alt="Logo" class="w-20 duration-200 hover:scale-110" />
@@ -51,7 +55,7 @@
               class="list-item transition-all duration-300 group-hover:blur-[3px] hover:opacity-100 hover:blur-none"
             >
               <button
-                @click="closeMenu"
+                @click="closeMenu(item.href)"
                 class="font-serif text-[2rem] leading-0 uppercase md:text-[4rem]"
               >
                 {{ item.label }}
@@ -95,9 +99,9 @@ import { useNavbarMenu } from '@/composables/useNavbarMenu'
 const { menuIsOpen, menu, header, overlay, toggleMenu, closeMenu } = useNavbarMenu()
 
 const navItems = [
-  { label: '✤ Inicio' },
-  { label: 'Experiencia' },
-  { label: 'Proyectos' },
-  { label: 'Contacto' },
+  { label: '✤ Inicio', href: '/' },
+  { label: 'Experiencia', href: '/#exp' },
+  { label: 'Proyectos', href: '/#proyectos' },
+  { label: 'Contacto', href: '/#contacto' },
 ]
 </script>

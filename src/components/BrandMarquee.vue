@@ -5,13 +5,13 @@ import ScrollingText from './ScrollingText.vue'
 <template>
   <section class="shade-in py-6">
     <ScrollingText
-      text="Carles Vargas ✤ Frontend Developer ✤ React ✤ Vue ✤ TypeScript ✤ GSAP ✤ UI/UX ✤"
-      class="font-serif text-[4rem]"
+      text="Carles Vargas ✤ Carles Vargas ✤ Carles Vargas ✤ Carles Vargas ✤ Carles Vargas ✤ Carles Vargas ✤"
+      class="font-serif text-[2rem] md:text-[4rem]"
     />
 
     <ScrollingText
-      text="Frontend Developer – Carles Vargas ✤ Interfaces limpias ✤ Animaciones suaves ✤ Experiencias memorables ✤"
-      class="font-serif text-[4rem]"
+      text="Carles Vargas ✤ Carles Vargas ✤ Carles Vargas ✤ Carles Vargas ✤ Carles Vargas ✤ Carles Vargas ✤"
+      class="font-serif text-[2rem] md:text-[4rem]"
       start-direction="right"
     />
   </section>

@@ -1,7 +1,7 @@
 <template>
   <MainHeader />
 
-  <main>
+  <main class="overflow-hidden">
     <RouterView />
   </main>
 

@@ -1,6 +1,6 @@
 <template>
   <main ref="workRef" class="container mx-auto py-20">
-    <h2 class="font-serif text-[5rem] font-semibold">Últimos trabajos</h2>
+    <h2 class="font-serif text-[2rem] font-semibold md:text-[5rem]">Últimos trabajos</h2>
 
     <div class="relative">
       <ul
@@ -18,7 +18,7 @@
         >
           <RouterLink
             :to="`/proyecto/${item.slug}`"
-            class="block w-full cursor-pointer text-left text-[8rem] font-bold"
+            class="block w-full cursor-pointer text-left text-[3rem] font-bold md:text-[8rem]"
           >
             {{ item.name }}
           </RouterLink>
@@ -27,7 +27,7 @@
 
       <div
         ref="featuredImageRef"
-        class="featured-image absolute top-0 right-10 h-[512px] w-[512px] overflow-hidden rounded-xl"
+        class="featured-image absolute top-0 right-10 hidden h-[512px] w-[512px] overflow-hidden rounded-xl md:block"
       >
         <img
           v-for="item in portfolio"

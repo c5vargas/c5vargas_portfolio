@@ -2,6 +2,7 @@
   <a
     ref="btnRef"
     class="group glass relative flex h-20 w-54 items-center justify-center gap-1.5 overflow-hidden rounded-full text-sm"
+    :class="$attrs.class"
     :href="link"
     @mouseenter="onHover"
     @mouseleave="onLeave"
@@ -19,6 +20,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import gsap from 'gsap'
+
+defineOptions({ inheritAttrs: false })
 
 defineProps<{
   link: string

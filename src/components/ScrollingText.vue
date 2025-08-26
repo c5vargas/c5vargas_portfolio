@@ -26,14 +26,9 @@ const props = withDefaults(defineProps<Props>(), {
 
 const textRef = ref<HTMLElement | null>(null)
 let animation: gsap.core.Tween | null = null
-let lastScrollY = window.scrollY
 let scrollTimeout: number | null = null
 let currentDirection: 'left' | 'right' = props.startDirection
 const speed = ref(props.baseSpeed)
-
-const toggleDirection = () => {
-  currentDirection = currentDirection === 'left' ? 'right' : 'left'
-}
 
 const animateText = () => {
   if (!textRef.value) return
@@ -53,15 +48,6 @@ const animateText = () => {
 }
 
 const handleScroll = () => {
-  const currentScrollY = window.scrollY
-  const scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up'
-
-  if (scrollDirection === 'up') {
-    toggleDirection()
-  } else {
-    currentDirection = props.startDirection
-  }
-
   speed.value = Math.max(1, props.baseSpeed - props.scrollSpeedIncrement)
 
   if (animation) {
@@ -77,8 +63,6 @@ const handleScroll = () => {
       animateText()
     }
   }, 200)
-
-  lastScrollY = currentScrollY
 }
 
 useGSAP(

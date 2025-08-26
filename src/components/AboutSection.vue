@@ -1,5 +1,8 @@
 <template>
-  <main ref="containerRef" class="relative flex h-screen w-full items-center justify-center px-10">
+  <main
+    ref="containerRef"
+    class="relative flex h-screen w-full items-center justify-center md:px-10"
+  >
     <img
       ref="pyramidRef"
       src="/pyramid.webp"
@@ -7,7 +10,7 @@
       role="presentational"
     />
     <div
-      class="shade-in w-full rounded-4xl border border-white/30 bg-primary px-4 py-20 text-black md:max-w-[700px] md:px-10"
+      class="shade-in w-full rounded-4xl border border-white/30 bg-primary py-20 text-black md:max-w-[700px] md:px-10"
     >
       <h3
         class="text-center font-serif text-[3rem] leading-[3rem] md:text-[6rem] md:leading-[6.6rem]"

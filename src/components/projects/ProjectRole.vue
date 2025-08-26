@@ -1,6 +1,6 @@
 <template>
   <article ref="containerRef" class="relative overflow-hidden py-10 md:py-40">
-    <div class="container mx-auto items-center justify-between px-4 md:flex md:p-0">
+    <div class="container mx-auto items-center justify-between md:flex">
       <header class="mb-10 md:mb-0">
         <h2 class="w-full text-[5rem] font-bold uppercase">Mi rol</h2>
         <p class="text-xl font-semibold md:max-w-2/3">{{ project.extract }}</p>
