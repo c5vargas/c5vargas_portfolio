@@ -1,9 +1,11 @@
 <template>
-  <main v-if="project">
+  <div class="separator h-28" />
+
+  <template v-if="project">
     <ProjectHeader :project="project" />
     <ProjectParallax :project="project" />
     <ProjectRole :project="project" />
-  </main>
+  </template>
 </template>
 
 <script setup lang="ts">

@@ -1,6 +1,5 @@
 <template>
   <main ref="header" class="relative">
-    <!-- Overlay -->
     <div
       v-show="menuIsOpen"
       ref="overlay"
@@ -8,13 +7,12 @@
       @click="closeMenu"
     />
 
-    <!-- Header -->
     <header class="fixed z-30 h-28 w-full" :class="menuIsOpen ? 'glass h-auto' : ''">
       <main class="container mx-auto flex items-center gap-6 p-4">
-        <!-- Logo -->
-        <img src="/logo-cream.svg" alt="Logo" class="w-20 duration-200 hover:scale-110" />
+        <RouterLink to="/" title="Volver al inicio">
+          <img src="/logo-cream.svg" alt="Logo" class="w-20 duration-200 hover:scale-110" />
+        </RouterLink>
 
-        <!-- Status -->
         <div
           class="glass hidden h-12 items-center justify-center gap-2 rounded-2xl px-5 transition-all duration-500 sm:flex"
           :class="menuIsOpen ? 'opacity-0' : 'opacity-100'"
@@ -23,7 +21,6 @@
           <span class="text-xs text-gray-300">Disponible para proyectos</span>
         </div>
 
-        <!-- Menu toggle -->
         <nav class="relative ms-auto">
           <button
             class="cursor-pointer"
@@ -37,7 +34,6 @@
         </nav>
       </main>
 
-      <!-- Nav menu -->
       <div
         id="primary-menu"
         ref="menu"
@@ -46,7 +42,6 @@
         :class="menuIsOpen ? 'pointer-events-auto' : 'pointer-events-none'"
       >
         <div class="container mx-auto p-6">
-          <!-- Navigation links -->
           <ul
             class="group flex flex-wrap items-center gap-3 text-lg text-white sm:max-w-1/2 md:gap-8 group-hover:[&>li]:opacity-60"
           >
@@ -64,7 +59,6 @@
             </li>
           </ul>
 
-          <!-- Social links -->
           <div
             class="mt-5 flex max-w-1/2 list-none flex-wrap px-5 md:mt-10 md:px-10 lg:justify-between"
           >

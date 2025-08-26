@@ -1,12 +1,15 @@
 <template>
-  <header class="container mx-auto grid h-[30rem] grid-cols-12 items-center">
+  <header
+    class="container mx-auto items-center px-4 pb-10 md:px-0 lg:flex lg:justify-between lg:pt-10"
+  >
     <h1
       id="modal-title"
-      class="col-span-12 font-serif text-[10rem] font-bold uppercase md:col-span-8"
+      class="col-span-12 font-serif text-[3rem] font-bold uppercase md:col-span-8 md:text-[8rem] lg:text-[10rem]"
     >
       {{ project.name }}
     </h1>
-    <section id="tech-stack" class="col-span-12 md:col-span-4">
+
+    <section id="tech-stack" class="max-w-[480px]">
       <ul class="flex flex-wrap gap-3">
         <li
           v-for="item in techStack"

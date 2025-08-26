@@ -58,6 +58,7 @@ const onHover = () => {
   })
 
   gsap.to(btnRef.value, { duration: 0.4, scale: 1.1, rotate: 4 })
+
   gsap.to(animatedShapes, {
     duration: 5,
     x: 'random(-800, 800)',

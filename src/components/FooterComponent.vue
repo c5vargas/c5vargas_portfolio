@@ -9,7 +9,7 @@ import { socialLinks } from '@/libs/mock/socials'
         class="container mx-auto flex h-[712px] w-full flex-col justify-center px-10 md:flex-row md:items-center md:justify-between md:px-0"
       >
         <h3
-          class="text-[4rem] leading-[4rem] font-black uppercase md:text-[7rem] md:leading-[6rem]"
+          class="text-[3rem] leading-[4rem] font-black uppercase md:text-[4rem] md:text-[7rem] md:leading-[6rem]"
         >
           De idea a<br />
           realidad
