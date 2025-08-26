@@ -56,47 +56,45 @@ const imageRefs = ref<HTMLImageElement[]>([])
 
 const { contextSafe } = useGSAP(() => {}, { scope: workRef })
 
-const handleMouseEnter = (item: Portfolio) =>
-  contextSafe(() => {
-    const nextImg = getImage(item.id)
-    if (!nextImg) return
+const handleMouseEnter = (item: Portfolio) => {
+  const nextImg = getImage(item.id)
+  if (!nextImg) return
 
-    if (workHovered.value) {
-      const prevImg = getImage(workHovered.value.id)
-      if (prevImg) {
-        gsap.to(prevImg, {
-          opacity: 0,
-          y: -512,
-          duration: 0.5,
-          ease: 'power2.inOut',
-        })
-      }
+  if (workHovered.value) {
+    const prevImg = getImage(workHovered.value.id)
+    if (prevImg) {
+      gsap.to(prevImg, {
+        opacity: 0,
+        y: -512,
+        duration: 0.5,
+        ease: 'power2.inOut',
+      })
     }
+  }
 
-    gsap.fromTo(
-      nextImg,
-      { opacity: 1, y: 512 },
-      { opacity: 1, y: 0, duration: 0.5, ease: 'power2.inOut' }
-    )
+  gsap.fromTo(
+    nextImg,
+    { opacity: 1, y: 512 },
+    { opacity: 1, y: 0, duration: 0.5, ease: 'power2.inOut' }
+  )
 
-    workHovered.value = item
-  })
+  workHovered.value = item
+}
 
-const resetSelection = () =>
-  contextSafe(() => {
-    if (workHovered.value) {
-      const prevImg = getImage(workHovered.value.id)
-      if (prevImg) {
-        gsap.to(prevImg, {
-          opacity: 0,
-          y: -512,
-          duration: 0.5,
-          ease: 'power2.inOut',
-        })
-      }
+const resetSelection = () => {
+  if (workHovered.value) {
+    const prevImg = getImage(workHovered.value.id)
+    if (prevImg) {
+      gsap.to(prevImg, {
+        opacity: 0,
+        y: -512,
+        duration: 0.5,
+        ease: 'power2.inOut',
+      })
     }
-    workHovered.value = null
-  })
+  }
+  workHovered.value = null
+}
 
 const handleMouseMove = (e: MouseEvent) =>
   contextSafe(() => {
