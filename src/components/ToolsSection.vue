@@ -20,7 +20,7 @@
       >
       <span
         class="will-fade block text-4xl font-semibold text-gray-50 opacity-0 text-shadow-lg/30 sm:text-5xl md:text-[5em]"
-        >+3150 commits</span
+        >+4.892 commits</span
       >
       <span
         class="will-fade block text-4xl font-semibold text-gray-50 opacity-0 text-shadow-lg/30 sm:text-5xl md:text-[5em]"
