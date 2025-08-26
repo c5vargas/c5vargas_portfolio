@@ -4,7 +4,7 @@
       ref="pyramidRef"
       src="/pyramid.webp"
       class="absolute -left-20 w-40 md:w-52"
-      alt="Icono de decoración"
+      role="presentational"
     />
     <div
       class="shade-in w-full rounded-4xl border border-white/30 bg-primary px-4 py-20 text-black md:max-w-[700px] md:px-10"
@@ -21,7 +21,7 @@
       ref="circleRef"
       src="/circle.webp"
       class="absolute -right-16 w-40 md:w-52"
-      alt="Icono de decoración"
+      role="presentational"
     />
   </main>
 </template>
