@@ -1,4 +1,31 @@
 # 📦 Changelog
+### [0.0.34](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.32...v0.0.34) (2025-08-26)
+
+
+### 🐛 Bug Fixes
+
+* **animations:** removed contextSave on fn with params ([59450d6](https://github.com/c5vargas/c5vargas_portfolio/commit/59450d68b12fbd19e7bf215ccdc095c9cce6a805))
+
+
+### ♻️ Code Refactoring
+
+* divide project page into components to separate responsibilities. ([62b4b9d](https://github.com/c5vargas/c5vargas_portfolio/commit/62b4b9d4a727efe7738facba2d902230b7c913de))
+
+
+### 🔧 Chores
+
+* **release:** 0.0.33 ([eb7ef72](https://github.com/c5vargas/c5vargas_portfolio/commit/eb7ef72548b501221d187e6d367d4fd004955ba8))
+* updated package.json ([795c6e8](https://github.com/c5vargas/c5vargas_portfolio/commit/795c6e838a2126ec5ff016ab919293fe242322ca))
+* upgrade typescript-eslint ([28519e7](https://github.com/c5vargas/c5vargas_portfolio/commit/28519e7d7a781a3637dc4f4c161815094f3923d9))
+
+
+### ✨ Features
+
+* **accessibility:** add helper to detect user preferences with reduced motion animations and effects ([76bf6ca](https://github.com/c5vargas/c5vargas_portfolio/commit/76bf6cad9f5869f7e9837dc81f8987e0db50e324))
+* improvements on ProjectPage and their components ([ebbd1bb](https://github.com/c5vargas/c5vargas_portfolio/commit/ebbd1bb8b261d74291e9539eded7eaba48660d0b))
+* improves on components ([0ab8ab9](https://github.com/c5vargas/c5vargas_portfolio/commit/0ab8ab995d8f169c7ae638e36b5bb9321ff2ae60))
+* upgraded number of commits ([ab9f011](https://github.com/c5vargas/c5vargas_portfolio/commit/ab9f011e7b9affe0dd075dfb791d89664fd75eaf))
+
 ### [0.0.33](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.31...v0.0.33) (2025-08-26)
 
 
