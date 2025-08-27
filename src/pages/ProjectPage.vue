@@ -5,14 +5,7 @@
     <ProjectHeader :project="project" />
     <ProjectParallax :project="project" />
     <ProjectRole :project="project" />
-    <ImagesCarousel
-      :images="['/default-1.webp', '/default-2.webp', '/default-3.webp']"
-      :autoplay="true"
-      :interval="5000"
-      :loop="true"
-      :transitionMs="600"
-      :snapThreshold="0.18"
-    />
+    <ProjectGallery :project="project" />
   </template>
 </template>
 
@@ -23,7 +16,7 @@ import portfolio, { type Portfolio } from '@/libs/mock/portfolio'
 import ProjectHeader from '@/components/projects/ProjectHeader.vue'
 import ProjectParallax from '@/components/projects/ProjectParallax.vue'
 import ProjectRole from '@/components/projects/ProjectRole.vue'
-import ImagesCarousel from '@/components/ImagesCarousel.vue'
+import ProjectGallery from '@/components/projects/ProjectGallery.vue'
 
 const route = useRoute()
 const project = ref<Portfolio>()

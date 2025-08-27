@@ -1,9 +1,14 @@
 <template>
-  <article ref="containerRef" class="relative overflow-hidden py-10 md:py-40">
+  <article ref="containerRef" class="padding relative overflow-hidden py-20 md:py-40">
     <div class="container mx-auto items-center justify-between md:flex">
       <header class="mb-10 md:mb-0">
-        <h2 class="w-full text-[5rem] font-bold uppercase">Mi rol</h2>
-        <p class="text-xl font-semibold md:max-w-2/3">{{ project.extract }}</p>
+        <span class="w-full text-xl leading-4 font-bold uppercase md:text-[2rem]">{{
+          project.subTitle
+        }}</span>
+        <h2 class="w-full text-4xl font-bold uppercase md:text-[5rem] md:leading-[4rem]">
+          {{ project.name }}
+        </h2>
+        <p class="mt-8 text-xl font-semibold md:max-w-2/3">{{ project.extract }}</p>
       </header>
       <div class="max-w-[714px]">
         <div ref="descrRef" class="text-2xl opacity-50 [&>p]:mb-6" v-html="project.descr" />

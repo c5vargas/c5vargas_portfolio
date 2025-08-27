@@ -1,5 +1,5 @@
 <template>
-  <header class="container mx-auto items-center pb-10 lg:flex lg:justify-between lg:pt-10">
+  <header class="padding container mx-auto items-center pb-10 lg:flex lg:justify-between lg:pt-10">
     <h1
       id="modal-title"
       class="col-span-12 font-serif text-[3rem] font-bold uppercase md:col-span-8 md:text-[8rem] lg:text-[10rem]"
@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps } from 'vue'
+import { computed } from 'vue'
 import type { Portfolio } from '@/libs/mock/portfolio'
 
 const props = defineProps<{ project: Portfolio }>()
