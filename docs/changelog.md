@@ -1,4 +1,6 @@
 # 📦 Changelog
+### [0.0.36](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.35...v0.0.36) (2025-08-27)
+
 ### [0.0.35](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.33...v0.0.35) (2025-08-27)
 
 
