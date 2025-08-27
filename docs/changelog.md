@@ -1,4 +1,21 @@
 # 📦 Changelog
+### [0.0.35](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.33...v0.0.35) (2025-08-27)
+
+
+### 🔧 Chores
+
+* **release:** 0.0.34 ([b3bc339](https://github.com/c5vargas/c5vargas_portfolio/commit/b3bc3390791f817d72adf620397dea1dca251e95))
+* upgrade typescript-eslint ([28519e7](https://github.com/c5vargas/c5vargas_portfolio/commit/28519e7d7a781a3637dc4f4c161815094f3923d9))
+
+
+### ✨ Features
+
+* **accessibility:** add helper to detect user preferences with reduced motion animations and effects ([76bf6ca](https://github.com/c5vargas/c5vargas_portfolio/commit/76bf6cad9f5869f7e9837dc81f8987e0db50e324))
+* add swiper ([17305c5](https://github.com/c5vargas/c5vargas_portfolio/commit/17305c5704d2277d1e72bf62e6da8852dba44202))
+* improvements on ProjectPage and their components ([ebbd1bb](https://github.com/c5vargas/c5vargas_portfolio/commit/ebbd1bb8b261d74291e9539eded7eaba48660d0b))
+* improves on components ([0ab8ab9](https://github.com/c5vargas/c5vargas_portfolio/commit/0ab8ab995d8f169c7ae638e36b5bb9321ff2ae60))
+* **Swiper:** add Swiper component on ProjectGallery component ([52b38f4](https://github.com/c5vargas/c5vargas_portfolio/commit/52b38f4343424c678600468d1649b69c96bce1a5))
+
 ### [0.0.34](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.32...v0.0.34) (2025-08-26)
 
 
