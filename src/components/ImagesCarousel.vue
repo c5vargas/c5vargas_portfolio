@@ -20,12 +20,12 @@
   </swiper>
   <div
     v-if="showCustomCursor"
-    class="pointer-events-none fixed z-50 flex h-[45px] w-[70px] -translate-[50%] transform items-center justify-center rounded-full bg-gray-900/50"
+    class="pointer-events-none fixed z-50 flex h-[45px] w-[85px] -translate-[50%] transform items-center justify-center gap-1 rounded-full bg-gray-900/50"
     :style="{ left: cursorX + 'px', top: cursorY + 'px' }"
   >
-    <ArrowLeftRounded class="size-5" />
+    <ArrowLeftRounded class="size-3" />
     <span class="text-xs font-bold">DRAG</span>
-    <ArrowRightRounded class="size-5" />
+    <ArrowRightRounded class="size-3" />
   </div>
 </template>
 
