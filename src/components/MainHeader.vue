@@ -101,7 +101,7 @@ const { menuIsOpen, menu, header, overlay, toggleMenu, closeMenu } = useNavbarMe
 const navItems = [
   { label: '✤ Inicio', href: '/' },
   { label: 'Experiencia', href: '/#exp' },
-  { label: 'Proyectos', href: '/#proyectos' },
+  { label: 'Proyectos', href: '/#projects' },
   { label: 'Contacto', href: '/#contacto' },
 ]
 </script>

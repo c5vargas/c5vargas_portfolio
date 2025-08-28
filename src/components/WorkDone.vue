@@ -1,5 +1,5 @@
 <template>
-  <main ref="workRef" class="container mx-auto py-20">
+  <main ref="workRef" id="projects" class="container mx-auto py-20">
     <h2 class="font-serif text-[2rem] font-semibold md:text-[5rem]">Últimos trabajos</h2>
 
     <div class="relative">
