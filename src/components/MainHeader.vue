@@ -18,11 +18,11 @@
         </RouterLink>
 
         <div
-          class="glass hidden h-12 items-center justify-center gap-2 rounded-2xl px-5 transition-all duration-500 sm:flex"
+          class="glass hidden h-12 items-center justify-center gap-2 rounded-2xl bg-black/30 px-5 transition-all duration-500 sm:flex"
           :class="menuIsOpen ? 'opacity-0' : 'opacity-100'"
         >
           <span class="status h-1.5 w-1.5 rounded-full bg-green-500"></span>
-          <span class="text-xs text-gray-300">Disponible para proyectos</span>
+          <span class="text-xs text-gray-200">Disponible para proyectos</span>
         </div>
 
         <nav class="relative ms-auto">
