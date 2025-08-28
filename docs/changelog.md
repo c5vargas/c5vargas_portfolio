@@ -1,4 +1,30 @@
 # 📦 Changelog
+### [0.0.38](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.34...v0.0.38) (2025-08-28)
+
+
+### ✨ Features
+
+* add swiper ([17305c5](https://github.com/c5vargas/c5vargas_portfolio/commit/17305c5704d2277d1e72bf62e6da8852dba44202))
+* added target blank on MainButton component ([cb69461](https://github.com/c5vargas/c5vargas_portfolio/commit/cb694611e654442a6675fa2ac7f8ed64ce591157))
+* **gallery:** trigger gallery display on carousel interaction ([c61b5ce](https://github.com/c5vargas/c5vargas_portfolio/commit/c61b5ce73494a10a3604aa3c410be77c7ccc59ba))
+* **header:** add link to projects in header ([216fb3a](https://github.com/c5vargas/c5vargas_portfolio/commit/216fb3ab19a5981b4814fe6918a0f97b5a78c78a))
+* **overlay:** add enter animation on project page ([b9dcbe6](https://github.com/c5vargas/c5vargas_portfolio/commit/b9dcbe6c77328353558ea5aede69892cf7a3077b))
+* **project:** adjusted aspect ratio from project images ([7890f9f](https://github.com/c5vargas/c5vargas_portfolio/commit/7890f9f5aaefe610d8b1eaa8e87f84dc4245a1df))
+* **router:** instantly scroll to top on route change ([db2c39a](https://github.com/c5vargas/c5vargas_portfolio/commit/db2c39a255204ecbc4da33f8189e3e6a436ff834))
+* **Swiper:** add Swiper component on ProjectGallery component ([52b38f4](https://github.com/c5vargas/c5vargas_portfolio/commit/52b38f4343424c678600468d1649b69c96bce1a5))
+
+
+### 🔧 Chores
+
+* **release:** 0.0.35 ([5b77b1c](https://github.com/c5vargas/c5vargas_portfolio/commit/5b77b1c92147b02ee18febe6a07a64f585809bc0))
+* **release:** 0.0.36 ([885a8a1](https://github.com/c5vargas/c5vargas_portfolio/commit/885a8a1858647c7a2f35c2ac7ad369f8e026e17c))
+* **release:** 0.0.37 ([1a3f770](https://github.com/c5vargas/c5vargas_portfolio/commit/1a3f770b571968adef5aea1993164d4d0df81f8d))
+
+
+### 🐛 Bug Fixes
+
+* **styles:** improvements and other fixes ([0a8ea6f](https://github.com/c5vargas/c5vargas_portfolio/commit/0a8ea6f2e38083ab16e7e2640ebd03ccf8fef892))
+
 ### [0.0.37](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.36...v0.0.37) (2025-08-28)
 
 
