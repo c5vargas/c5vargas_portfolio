@@ -52,6 +52,7 @@ const portfolio = [
       'https://res.cloudinary.com/carvar-es/image/upload/v1756375280/www.carvar.es/projects/lofilab/lofilab-2_bh3jvh.avif',
       'https://res.cloudinary.com/carvar-es/image/upload/v1756375598/www.carvar.es/projects/lofilab/lofilab-login_opldm9.avif',
       'https://res.cloudinary.com/carvar-es/image/upload/v1756376134/www.carvar.es/projects/lofilab/lofilab-scenes_qhl7gg.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756377021/www.carvar.es/projects/lofilab/lofilab-effects_stkmov.avif',
       'https://res.cloudinary.com/carvar-es/image/upload/v1756375353/www.carvar.es/projects/lofilab/lofilab-3_axwac2.avif',
       'https://res.cloudinary.com/carvar-es/image/upload/v1756375509/www.carvar.es/projects/lofilab/lofilab-4_uqljuw.avif',
     ],

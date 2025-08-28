@@ -6,6 +6,8 @@
       clickable: true,
     }"
     class="cursor-none"
+    @touchStart="onTouchStart"
+    @touchEnd="onTouchEnd"
     @mouseenter="showCustomCursor = true"
     @mouseleave="showCustomCursor = false"
     @mousemove="updateCursorPosition"
@@ -42,9 +44,21 @@ const showCustomCursor = ref(false)
 const cursorX = ref(0)
 const cursorY = ref(0)
 
+const emit = defineEmits<{
+  (e: 'onTouchStart'): void
+  (e: 'onTouchEnd'): void
+}>()
 const { images } = defineProps<{
   images: string[]
 }>()
+
+const onTouchStart = () => {
+  emit('onTouchStart')
+}
+
+const onTouchEnd = () => {
+  emit('onTouchEnd')
+}
 
 const updateCursorPosition = (e: MouseEvent) => {
   cursorX.value = e.clientX
