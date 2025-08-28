@@ -1,4 +1,16 @@
 # 📦 Changelog
+### [0.0.37](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.36...v0.0.37) (2025-08-28)
+
+
+### ✨ Features
+
+* added target blank on MainButton component ([cb69461](https://github.com/c5vargas/c5vargas_portfolio/commit/cb694611e654442a6675fa2ac7f8ed64ce591157))
+* **gallery:** trigger gallery display on carousel interaction ([c61b5ce](https://github.com/c5vargas/c5vargas_portfolio/commit/c61b5ce73494a10a3604aa3c410be77c7ccc59ba))
+* **header:** add link to projects in header ([216fb3a](https://github.com/c5vargas/c5vargas_portfolio/commit/216fb3ab19a5981b4814fe6918a0f97b5a78c78a))
+* **overlay:** add enter animation on project page ([b9dcbe6](https://github.com/c5vargas/c5vargas_portfolio/commit/b9dcbe6c77328353558ea5aede69892cf7a3077b))
+* **project:** adjusted aspect ratio from project images ([7890f9f](https://github.com/c5vargas/c5vargas_portfolio/commit/7890f9f5aaefe610d8b1eaa8e87f84dc4245a1df))
+* **router:** instantly scroll to top on route change ([db2c39a](https://github.com/c5vargas/c5vargas_portfolio/commit/db2c39a255204ecbc4da33f8189e3e6a436ff834))
+
 ### [0.0.36](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.35...v0.0.36) (2025-08-27)
 
 ### [0.0.35](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.33...v0.0.35) (2025-08-27)
