@@ -17,7 +17,7 @@ const { project } = defineProps<{
 }>()
 
 const parallaxRef = ref<HTMLElement | null>(null)
-const bgImage = computed(() => `url(/${project.images[0]})`)
+const bgImage = computed(() => `url(${project.images[0]})`)
 
 useGSAP(
   () => {

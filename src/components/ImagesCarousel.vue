@@ -12,8 +12,9 @@
   >
     <swiper-slide v-for="image in images" :key="image">
       <img
-        :src="`/${image}`"
-        class="block w-full max-w-screen rounded-2xl object-cover object-center"
+        :src="image"
+        loading="lazy"
+        class="block aspect-video w-full max-w-screen rounded-2xl object-cover object-center"
         alt="Imagen del proyecto"
       />
     </swiper-slide>

@@ -39,6 +39,26 @@ const portfolio = [
   },
   {
     id: 3,
+    name: 'LofiLab',
+    slug: 'lofilab',
+    subTitle: 'Immersive productivity soundscape',
+    extract:
+      'Plataforma web diseñada para mejorar la concentración mediante entornos sonoros y visuales. Desarrollada con Laravel y React TypeScript, integra música en streaming desde Audius y cuenta con una interfaz altamente optimizada.',
+    descr:
+      '<p>LofiLab es una solución digital pensada para mejorar el enfoque en sesiones de estudio o trabajo profundo. Combina música lofi y ambient proveniente de la plataforma Audius con efectos sonoros personalizables (lluvia, fuego, ruido blanco) y fondos de pantalla dinámicos con cambios de clima y hora del día.</p><p>El frontend ha sido desarrollado en React con TypeScript y TailwindCSS, priorizando una navegación fluida, animaciones ligeras y una experiencia de usuario minimalista. La interfaz permite personalizar escenarios, gestionar sesiones, y utilizar herramientas como el temporizador Pomodoro o el modo enfoque, todo encapsulado en ventanas flotantes modulares.</p><p>El backend, implementado en Laravel 12, expone una API REST que gestiona datos de usuarios, preferencias, combinaciones favoritas y seguimiento de actividad. La integración con la API de Audius permite obtener streams directos de audio bajo demanda, sin sobrecargar el servidor.</p><p>En términos técnicos, el proyecto ha sido construido siguiendo principios de rendimiento y accesibilidad. LofiLab obtiene puntuaciones altas en Lighthouse (rendimiento, accesibilidad, buenas prácticas y SEO), asegurando una experiencia rápida y optimizada incluso en dispositivos de gama media.</p>',
+    stack: 'Laravel, React, TypeScript, TailwindCSS, Audius API, Framer, HTML, CSS',
+    images: [
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756375122/www.carvar.es/projects/lofilab/lofilab-1_qunkip.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756375280/www.carvar.es/projects/lofilab/lofilab-2_bh3jvh.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756375598/www.carvar.es/projects/lofilab/lofilab-login_opldm9.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756376134/www.carvar.es/projects/lofilab/lofilab-scenes_qhl7gg.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756375353/www.carvar.es/projects/lofilab/lofilab-3_axwac2.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756375509/www.carvar.es/projects/lofilab/lofilab-4_uqljuw.avif',
+    ],
+    link: 'https://www.lofilab.me',
+  },
+  {
+    id: 4,
     name: 'HHunt',
     slug: 'hhunt',
     subTitle: 'Hacoo Saramart product finder',
@@ -49,19 +69,6 @@ const portfolio = [
     stack: 'React.js, Laravel, API Rest, TailwindCSS, HTML, CSS',
     images: ['default-3.webp', 'default.webp'],
     link: 'https://hhunt.es',
-  },
-  {
-    id: 4,
-    name: 'LofiLab',
-    slug: 'lofilab',
-    subTitle: 'Immersive productivity soundscape',
-    extract:
-      'Plataforma web diseñada para mejorar la concentración mediante entornos sonoros y visuales. Desarrollada con Laravel y React TypeScript, integra música en streaming desde Audius y cuenta con una interfaz altamente optimizada.',
-    descr:
-      '<p>LofiLab es una solución digital pensada para mejorar el enfoque en sesiones de estudio o trabajo profundo. Combina música lofi y ambient proveniente de la plataforma Audius con efectos sonoros personalizables (lluvia, fuego, ruido blanco) y fondos de pantalla dinámicos con cambios de clima y hora del día.</p><p>El frontend ha sido desarrollado en React con TypeScript y TailwindCSS, priorizando una navegación fluida, animaciones ligeras y una experiencia de usuario minimalista. La interfaz permite personalizar escenarios, gestionar sesiones, y utilizar herramientas como el temporizador Pomodoro o el modo enfoque, todo encapsulado en ventanas flotantes modulares.</p><p>El backend, implementado en Laravel 12, expone una API REST que gestiona datos de usuarios, preferencias, combinaciones favoritas y seguimiento de actividad. La integración con la API de Audius permite obtener streams directos de audio bajo demanda, sin sobrecargar el servidor.</p><p>En términos técnicos, el proyecto ha sido construido siguiendo principios de rendimiento y accesibilidad. LofiLab obtiene puntuaciones altas en Lighthouse (rendimiento, accesibilidad, buenas prácticas y SEO), asegurando una experiencia rápida y optimizada incluso en dispositivos de gama media.</p>',
-    stack: 'Laravel, React, TypeScript, TailwindCSS, Audius API, Framer, HTML, CSS',
-    images: ['default.webp', 'default.webp'],
-    link: 'https://www.lofilab.me',
   },
   {
     id: 5,
