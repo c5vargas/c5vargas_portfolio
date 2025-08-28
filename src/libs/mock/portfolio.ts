@@ -21,7 +21,14 @@ const portfolio = [
     descr:
       '<p>Rendfitt es mucho más que una simple página web corporativa; es una plataforma diseñada con tecnología de vanguardia para ofrecer una experiencia óptima tanto para el entrenador como para sus clientes. Utilizando React.js, hemos creado una interfaz interactiva y receptiva que permite una navegación fluida y una experiencia de usuario excepcional. Además, hemos integrado react-router para gestionar la navegación entre páginas de manera eficiente y react-helmet para optimizar el SEO y mejorar la visibilidad en los motores de búsqueda.</p><p>Este proyecto demuestra mi capacidad para utilizar tecnologías modernas de frontend para desarrollar soluciones web efectivas y orientadas al rendimiento. Al presentar Rendfitt en mi portfolio, destaco mi habilidad para crear experiencias digitales de alta calidad que se adaptan a las necesidades específicas del cliente, en este caso, un entrenador deportivo de élite que trabaja con jugadores profesionales de fútbol.</p>',
     stack: 'React, TailwindCSS, React Router, Typescript, HTML, CSS, Framer',
-    images: ['default-1.webp', 'default.webp'],
+    images: [
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756393500/www.carvar.es/projects/rendfitt/rendfitt-about_jtqnry.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756393499/www.carvar.es/projects/rendfitt/rendfitt-hero_l4ikhl.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756393502/www.carvar.es/projects/rendfitt/rendfitt-training_uihld8.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756393501/www.carvar.es/projects/rendfitt/rendfitt-caso-exito_jgtcnv.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756393501/www.carvar.es/projects/rendfitt/rendfitt-players_ntlqmm.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756393500/www.carvar.es/projects/rendfitt/rendfitt-pricing_siibvn.avif',
+    ],
     link: 'https://rendfitt.com',
   },
   {
@@ -34,7 +41,12 @@ const portfolio = [
     descr:
       '<p>Xeckin Holidays es más que una simple agencia de vacaciones; es un portal que te conecta con alojamientos únicos y auténticos, seleccionados cuidadosamente para garantizar calidad, confort y seguridad. Con un enfoque en la atención al cliente y la inmersión cultural, cada villa y apartamento ha sido verificado para ofrecer una experiencia de viaje que te haga sentir como en casa.</p><p>Este proyecto ha sido desarrollado utilizando NextJS y Tailwindcss, y está desplegado en Vercel. Además, es un sitio web multiidioma con SEO optimizado para asegurar su visibilidad en los primeros resultados de Google. Al incluir Xeckin Holidays en mi portfolio, demuestro mi capacidad para crear plataformas web de alta calidad que se adaptan a las necesidades del sector turístico, ofreciendo soluciones que combinan tecnología moderna y un diseño enfocado en el usuario.</p>',
     stack: 'NextJS, React, Vercel, Tailwindcss, Typescript, HTML, CSS',
-    images: ['default-2.webp', 'default.webp'],
+    images: [
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756394121/www.carvar.es/projects/xeckin/xeckin-hero_loelzm.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756394120/www.carvar.es/projects/xeckin/xeckin-list_hhfea9.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756394120/www.carvar.es/projects/xeckin/xeckin-product_g71zb9.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756394118/www.carvar.es/projects/xeckin/xeckin-seo-landing_uwhomz.avif',
+    ],
     link: 'https://xeckinholidays.com',
   },
   {
@@ -68,7 +80,13 @@ const portfolio = [
     descr:
       '<p>Hacoo Hunt es más que una simple página web; es una puerta de entrada a los mejores productos de Hacoo Saramart, optimizada para una experiencia de usuario superior. Mi contribución incluye el desarrollo de una interfaz intuitiva utilizando React.js, que permite a los usuarios encontrar rápidamente los artículos más populares. En el backend, hemos utilizado Laravel para crear un servidor API Rest robusto y escalable, mientras que en el frontend hemos empleado TailwindCSS para un diseño elegante y receptivo. Además, hemos integrado react-helmet para optimizar el SEO y mejorar la visibilidad en los motores de búsqueda.</p><p>Este proyecto ejemplifica mi habilidad para crear soluciones web completas utilizando una variedad de tecnologías frontend y backend. Presentar Hacoo Hunt en mi portfolio destaca mi capacidad para diseñar y desarrollar experiencias digitales de alta calidad que se destacan en un mercado competitivo como el comercio electrónico.</p>',
     stack: 'React.js, Laravel, API Rest, TailwindCSS, HTML, CSS',
-    images: ['default-3.webp', 'default.webp'],
+    images: [
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756394908/www.carvar.es/projects/hhunt/hhunt-hero_gkqsfi.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756394915/www.carvar.es/projects/hhunt/hhunt-brand_k16qha.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756394918/www.carvar.es/projects/hhunt/hhunt-community_sz6ury.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756394913/www.carvar.es/projects/hhunt/hhunt-product_y3g2bz.avif',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756394908/www.carvar.es/projects/hhunt/hhunt-profile_aplxls.avif',
+    ],
     link: 'https://hhunt.es',
   },
   {
