@@ -1,4 +1,17 @@
 # 📦 Changelog
+### [0.0.39](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.38...v0.0.39) (2025-08-28)
+
+
+### 🐛 Bug Fixes
+
+* **styles:** improvements and bug fixes ([968eb4a](https://github.com/c5vargas/c5vargas_portfolio/commit/968eb4a2fb45bf2b52bd396885faba586c728e85))
+
+
+### ✨ Features
+
+* **projects:** added images ([1d6524e](https://github.com/c5vargas/c5vargas_portfolio/commit/1d6524e062efcbd98c716137c1a93c6a7295c790))
+* **projects:** added images ([ebb6a88](https://github.com/c5vargas/c5vargas_portfolio/commit/ebb6a88d6735485c8cab962610131bf04a43a286))
+
 ### [0.0.38](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.34...v0.0.38) (2025-08-28)
 
 
