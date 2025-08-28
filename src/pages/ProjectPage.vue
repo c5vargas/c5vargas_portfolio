@@ -2,6 +2,7 @@
   <div class="separator h-28" />
 
   <template v-if="project">
+    <ProjectOverlay />
     <ProjectHeader :project="project" />
     <ProjectParallax :project="project" />
     <ProjectRole :project="project" />
@@ -17,6 +18,7 @@ import ProjectHeader from '@/components/projects/ProjectHeader.vue'
 import ProjectParallax from '@/components/projects/ProjectParallax.vue'
 import ProjectRole from '@/components/projects/ProjectRole.vue'
 import ProjectGallery from '@/components/projects/ProjectGallery.vue'
+import ProjectOverlay from '@/components/projects/ProjectOverlay.vue'
 
 const route = useRoute()
 const project = ref<Portfolio>()
