@@ -26,25 +26,27 @@ let textAnimation: gsap.core.Tween
 
 useGSAP(
   () => {
-    console.log('rendered')
-    textAnimation = gsap.fromTo(
-      textRef.value,
-      {
-        fontSize: '6rem',
-        color: '#fff3e8',
-      },
-      {
-        duration: 0.4,
-        fontSize: '4rem',
-        color: '#11363b',
-        ease: 'power2.inOut',
-      }
-    )
+    textAnimation = gsap
+      .fromTo(
+        textRef.value,
+        {
+          fontSize: '6rem',
+          color: '#fff3e8',
+        },
+        {
+          duration: 0.4,
+          fontSize: '4rem',
+          color: '#11363b',
+          ease: 'power2.inOut',
+        }
+      )
+      .pause()
   },
   { scope: containerRef }
 )
 
 const startAnimation = () => {
+  console.log('Start animation')
   textAnimation.play()
 }
 

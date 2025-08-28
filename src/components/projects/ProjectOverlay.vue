@@ -11,22 +11,15 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import { useGSAP } from 'gsap-vue'
 import gsap from 'gsap'
 
-// ✅ refs tipados y reactivos
 const overlayRefs = ref<HTMLElement[]>([])
 const containerRef = ref<HTMLElement | null>(null)
 
-// ✅ estilos dinámicos
 const overlayStyles = ['bg-primary top-0', 'bg-lime-400 -top-50']
 
-onMounted(() => {
-  console.log('Overlays montados:', overlayRefs.value)
-})
-
-// ✅ animación mejorada
 useGSAP(
   () => {
     const tl = gsap.timeline({
@@ -36,7 +29,6 @@ useGSAP(
       },
     })
 
-    // ✅ animación más fluida usando translateY en vez de top
     tl.to(overlayRefs.value, {
       yPercent: -120,
     })

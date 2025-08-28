@@ -34,7 +34,7 @@
           :key="item.id"
           ref="imageRefs"
           class="featured-image-item absolute h-[512px] w-[512px] rounded-xl object-cover opacity-0"
-          :src="`/${item.images[0]}`"
+          :src="item.images[0]"
           :alt="item.extract"
         />
       </div>
