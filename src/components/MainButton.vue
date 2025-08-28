@@ -4,6 +4,7 @@
     class="group glass relative flex h-20 w-54 items-center justify-center gap-1.5 overflow-hidden rounded-full text-sm"
     :class="$attrs.class"
     :href="link"
+    target="_blank"
     @mouseenter="onHover"
     @mouseleave="onLeave"
   >
