@@ -1,5 +1,5 @@
 <template>
-  <article ref="containerRef" class="padding relative overflow-hidden py-20 md:py-40">
+  <article ref="containerRef" class="padding relative overflow-hidden py-20 md:py-56">
     <div class="container mx-auto items-center justify-between md:flex">
       <header class="mb-10 md:mb-0">
         <span class="w-full text-xl leading-4 font-bold uppercase md:text-[2rem]">{{

@@ -1,5 +1,5 @@
 <template>
-  <main ref="containerRef" class="padding w-full items-center md:flex">
+  <main ref="containerRef" class="padding w-full items-center py-20 md:flex md:py-40">
     <div class="flex h-40 items-center justify-center md:min-w-[300px] md:p-4">
       <span ref="textRef" class="text-3xl font-bold uppercase md:text-[5rem]">Drag</span>
     </div>

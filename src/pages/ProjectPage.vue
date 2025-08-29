@@ -6,6 +6,7 @@
     <ProjectHeader :project="project" />
     <ProjectParallax :project="project" />
     <ProjectRole :project="project" />
+    <ProjectBanner :projectName="project.name" />
     <ProjectGallery :project="project" />
   </template>
 </template>
@@ -19,6 +20,7 @@ import ProjectParallax from '@/components/projects/ProjectParallax.vue'
 import ProjectRole from '@/components/projects/ProjectRole.vue'
 import ProjectGallery from '@/components/projects/ProjectGallery.vue'
 import ProjectOverlay from '@/components/projects/ProjectOverlay.vue'
+import ProjectBanner from '@/components/projects/ProjectBanner.vue'
 
 const route = useRoute()
 const project = ref<Portfolio>()
