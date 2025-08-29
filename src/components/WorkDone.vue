@@ -45,7 +45,6 @@
 <script setup lang="ts">
 import portfolio, { Portfolio } from '@/libs/mock/portfolio'
 import gsap from 'gsap'
-import { useGSAP } from 'gsap-vue'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { RouterLink } from 'vue-router'
 
@@ -53,8 +52,6 @@ const workRef = ref<HTMLElement | null>(null)
 const featuredImageRef = ref<HTMLElement | null>(null)
 const workHovered = ref<Portfolio | null>(null)
 const imageRefs = ref<HTMLImageElement[]>([])
-
-const { contextSafe } = useGSAP(() => {}, { scope: workRef })
 
 const handleMouseEnter = (item: Portfolio) => {
   const nextImg = getImage(item.id)
@@ -96,19 +93,18 @@ const resetSelection = () => {
   workHovered.value = null
 }
 
-const handleMouseMove = (e: MouseEvent) =>
-  contextSafe(() => {
-    if (!featuredImageRef.value || !workRef.value) return
+const handleMouseMove = (e: MouseEvent) => {
+  if (!featuredImageRef.value || !workRef.value) return
 
-    const containerRect = workRef.value.getBoundingClientRect()
-    const relativeY = e.clientY - containerRect.top
+  const containerRect = workRef.value.getBoundingClientRect()
+  const relativeY = e.clientY - containerRect.top
 
-    gsap.to(featuredImageRef.value, {
-      y: relativeY - featuredImageRef.value.offsetHeight / 2,
-      duration: 1,
-      ease: 'power2.out',
-    })
+  gsap.to(featuredImageRef.value, {
+    y: relativeY - featuredImageRef.value.offsetHeight,
+    duration: 1,
+    ease: 'power2.out',
   })
+}
 
 const getImage = (id: number) => {
   const index = portfolio.findIndex(p => p.id === id)
