@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useGSAP } from 'gsap-vue'
 import gsap from 'gsap'
 
@@ -20,19 +20,23 @@ const containerRef = ref<HTMLElement | null>(null)
 
 const overlayStyles = ['bg-primary top-0', 'bg-lime-400 -top-50']
 
+const tl = gsap.timeline({
+  defaults: { duration: 1, ease: 'power3.outIn' },
+  onComplete: () => {
+    containerRef.value!.style.display = 'none'
+  },
+})
+
 useGSAP(
   () => {
-    const tl = gsap.timeline({
-      defaults: { duration: 1, ease: 'power3.outIn' },
-      onComplete: () => {
-        containerRef.value!.style.display = 'none'
-      },
-    })
-
     tl.to(overlayRefs.value, {
       yPercent: -120,
     })
   },
   { scope: containerRef }
 )
+
+onMounted(() => {
+  containerRef.value!.style.display = 'block'
+})
 </script>

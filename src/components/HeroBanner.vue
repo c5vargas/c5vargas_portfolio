@@ -17,11 +17,7 @@
       </div>
 
       <div class="relative inline-block">
-        <a
-          ref="btn"
-          class="button group glass flex items-center gap-5 text-sm"
-          href="mailto:carles@carvar.es"
-        >
+        <a ref="btn" class="button group glass flex items-center gap-5 text-sm" :href="mailtoHref">
           <div class="shiny-text inline-block">Conectar ahora</div>
           <ArrowUpRight class="w-5 animate-pulse text-primary group-active:text-secondary" />
         </a>
@@ -33,12 +29,15 @@
 <script setup lang="ts">
 import { gsap } from 'gsap'
 import { useGSAP } from 'gsap-vue'
-import { onMounted, onUnmounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import ArrowUpRight from './icons/ArrowUpRight.vue'
 import HeroBannerBackground from './HeroBannerBackground.vue'
 
 const hero = ref<HTMLElement | null>(null)
 const btn = ref<HTMLElement | null>(null)
+
+const email = import.meta.env.VITE_APP_EMAIL
+const mailtoHref = computed(() => `mailto:${email}`)
 
 useGSAP(
   () => {

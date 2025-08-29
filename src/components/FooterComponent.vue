@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { socialLinks } from '@/libs/mock/socials'
+import { computed } from 'vue'
+
+const email = import.meta.env.VITE_APP_EMAIL
+const mailtoHref = computed(() => `mailto:${email}`)
 </script>
 
 <template>
@@ -21,9 +25,12 @@ import { socialLinks } from '@/libs/mock/socials'
             transformar tus ideas en soluciones digitales escalables, rápidas y seguras.
           </p>
 
-          <button class="button group glass mt-4 flex items-center gap-5 text-sm">
+          <a
+            :href="mailtoHref"
+            class="button group glass mt-4 flex inline-block items-center gap-5 text-sm"
+          >
             <span class="shiny-text">Hablemos de tu proyecto</span>
-          </button>
+          </a>
         </div>
       </div>
 
@@ -51,7 +58,7 @@ import { socialLinks } from '@/libs/mock/socials'
                   :key="social.label"
                   class="animation-link highlight-black mb-4 text-lg"
                 >
-                  <a :href="social.href">{{ social.label }}</a>
+                  <a target="_blank" :href="social.href">{{ social.label }}</a>
                 </li>
               </ul>
             </div>

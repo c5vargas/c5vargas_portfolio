@@ -48,7 +48,7 @@ useGSAP(
       scrollTrigger: {
         trigger: containerRef.value,
         start: 'top center',
-        end: 'bottom center',
+        end: 'bottom top',
         scrub: true,
       },
     })
