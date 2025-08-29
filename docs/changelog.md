@@ -1,4 +1,25 @@
 # 📦 Changelog
+### [0.0.40](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.37...v0.0.40) (2025-08-29)
+
+
+### 🐛 Bug Fixes
+
+* **styles:** improvements and bug fixes ([968eb4a](https://github.com/c5vargas/c5vargas_portfolio/commit/968eb4a2fb45bf2b52bd396885faba586c728e85))
+* **styles:** improvements and other fixes ([0a8ea6f](https://github.com/c5vargas/c5vargas_portfolio/commit/0a8ea6f2e38083ab16e7e2640ebd03ccf8fef892))
+
+
+### 🔧 Chores
+
+* **release:** 0.0.38 ([c4260c1](https://github.com/c5vargas/c5vargas_portfolio/commit/c4260c1c351077b6953449d1d15b5d1493e69c5c))
+* **release:** 0.0.39 ([889f67f](https://github.com/c5vargas/c5vargas_portfolio/commit/889f67fee615e94cfa52d3752bb5b72308e25196))
+
+
+### ✨ Features
+
+* improves on components & pages ([9a7efd1](https://github.com/c5vargas/c5vargas_portfolio/commit/9a7efd1a195a3d14029b80dce85cd4b0ddc07ef2))
+* **projects:** added images ([1d6524e](https://github.com/c5vargas/c5vargas_portfolio/commit/1d6524e062efcbd98c716137c1a93c6a7295c790))
+* **projects:** added images ([ebb6a88](https://github.com/c5vargas/c5vargas_portfolio/commit/ebb6a88d6735485c8cab962610131bf04a43a286))
+
 ### [0.0.39](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.38...v0.0.39) (2025-08-28)
 
 
