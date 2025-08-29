@@ -1,4 +1,23 @@
 # 📦 Changelog
+### [0.0.41](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.40...v0.0.41) (2025-08-29)
+
+
+### 🔧 Chores
+
+* **release:** 0.0.40 ([ff32d1f](https://github.com/c5vargas/c5vargas_portfolio/commit/ff32d1f194cb05a17ac2551223f6657c781e60bc))
+
+
+### 🐛 Bug Fixes
+
+* **gsap:** removed 'contextSafe' on handleMouseEvent fn ([710508b](https://github.com/c5vargas/c5vargas_portfolio/commit/710508bde6610cda35050b7b325c9cea47cf6121))
+
+
+### ✨ Features
+
+* improves on components & pages ([9a7efd1](https://github.com/c5vargas/c5vargas_portfolio/commit/9a7efd1a195a3d14029b80dce85cd4b0ddc07ef2))
+* **ProjectBanner:** add animated separator for project name ([2927a26](https://github.com/c5vargas/c5vargas_portfolio/commit/2927a26b0f7a4220a0eb2ec4d2bc0dfff19108c2))
+* **projects:** added footer navigation on each project ([bc4f773](https://github.com/c5vargas/c5vargas_portfolio/commit/bc4f773a40dd657b1ba13fad2e19b3d8387e7ab8))
+* style improvements and meta tags ([d4b0aef](https://github.com/c5vargas/c5vargas_portfolio/commit/d4b0aefb5171d42051ce9f2d150bccb34bd0b04c))
 
 ### [0.0.40](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.37...v0.0.40) (2025-08-29)
 
