@@ -13,7 +13,7 @@ const mailtoHref = computed(() => `mailto:${email}`)
         class="container mx-auto flex h-[712px] w-full flex-col justify-center px-10 md:flex-row md:items-center md:justify-between md:px-0"
       >
         <h3
-          class="text-[3rem] leading-[4rem] font-black uppercase md:text-[4rem] md:text-[7rem] md:leading-[6rem]"
+          class="text-[4rem] leading-[4rem] font-black uppercase md:text-[6rem] md:leading-[6rem] lg:text-[7rem]"
         >
           De idea a<br />
           realidad
@@ -25,10 +25,7 @@ const mailtoHref = computed(() => `mailto:${email}`)
             transformar tus ideas en soluciones digitales escalables, rápidas y seguras.
           </p>
 
-          <a
-            :href="mailtoHref"
-            class="button group glass mt-4 flex inline-block items-center gap-5 text-sm"
-          >
+          <a :href="mailtoHref" class="button group glass mt-4 inline-block text-sm">
             <span class="shiny-text">Hablemos de tu proyecto</span>
           </a>
         </div>
@@ -37,10 +34,10 @@ const mailtoHref = computed(() => `mailto:${email}`)
       <section class="bg-gradient-to-b from-black/30 to-primary/10 pb-20">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-4">
           <div class="col-span-3">
-            <img src="/logo-cream.svg" alt="Logotipo" class="w-[250px]" />
+            <img src="/logo-cream.svg" alt="Logotipo" class="mx-auto w-[250px] md:mx-0" />
           </div>
 
-          <div class="col-span-1 flex gap-12">
+          <div class="col-span-1 flex justify-center gap-12 md:justify-end">
             <div>
               <span class="text-sm text-gray-400">LINKS</span>
               <ul class="mt-4">

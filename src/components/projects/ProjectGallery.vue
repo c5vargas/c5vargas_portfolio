@@ -1,7 +1,7 @@
 <template>
   <main ref="containerRef" class="padding w-full items-center py-20 md:flex md:py-40">
     <div class="flex h-40 items-center justify-center md:min-w-[300px] md:p-4">
-      <span ref="textRef" class="text-3xl font-bold uppercase md:text-[5rem]">Drag</span>
+      <span ref="textRef" class="text-[4.2rem] font-bold uppercase md:text-[5rem]">Drag</span>
     </div>
 
     <ImagesCarousel
@@ -32,12 +32,11 @@ useGSAP(
         textRef.value,
         {
           duration: 0.4,
-          fontSize: '6rem',
           color: '#fff3e8',
         },
         {
           duration: 0.4,
-          fontSize: '5rem',
+          fontSize: '4rem',
           color: '#11363b',
           ease: 'power2.inOut',
         }
