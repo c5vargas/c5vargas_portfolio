@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
+import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import portfolio, { type Portfolio } from '@/libs/mock/portfolio'
 import ProjectHeader from '@/components/projects/ProjectHeader.vue'
@@ -25,10 +25,11 @@ const project = ref<Portfolio>()
 
 const loadProject = (slug: string) => (project.value = portfolio.find(el => el.slug === slug))
 
-onMounted(() => loadProject(route.params.slug as string))
-
 watch(
   () => route.params.slug,
-  newSlug => loadProject(newSlug as string)
+  newSlug => {
+    if (newSlug) loadProject(newSlug as string)
+  },
+  { immediate: true }
 )
 </script>

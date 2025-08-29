@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, defineProps } from 'vue'
+import { computed, ref } from 'vue'
 import type { Portfolio } from '@/libs/mock/portfolio'
 import { useGSAP } from 'gsap-vue'
 import gsap from 'gsap'
