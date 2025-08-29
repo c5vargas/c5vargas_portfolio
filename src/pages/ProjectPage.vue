@@ -2,12 +2,13 @@
   <div class="separator h-28" />
 
   <template v-if="project">
-    <ProjectOverlay />
+    <ProjectOverlay :project-id="project.id" />
     <ProjectHeader :project="project" />
     <ProjectParallax :project="project" />
     <ProjectRole :project="project" />
     <ProjectBanner :projectName="project.name" />
     <ProjectGallery :project="project" />
+    <ProjectFooter :project-id="project.id" />
   </template>
 </template>
 
@@ -21,6 +22,7 @@ import ProjectRole from '@/components/projects/ProjectRole.vue'
 import ProjectGallery from '@/components/projects/ProjectGallery.vue'
 import ProjectOverlay from '@/components/projects/ProjectOverlay.vue'
 import ProjectBanner from '@/components/projects/ProjectBanner.vue'
+import ProjectFooter from '@/components/projects/ProjectFooter.vue'
 
 const route = useRoute()
 const project = ref<Portfolio>()

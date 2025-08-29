@@ -11,9 +11,13 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref, watch } from 'vue'
 import { useGSAP } from 'gsap-vue'
 import gsap from 'gsap'
+
+const { projectId } = defineProps<{
+  projectId: number
+}>()
 
 const overlayRefs = ref<HTMLElement[]>([])
 const containerRef = ref<HTMLElement | null>(null)
@@ -21,7 +25,7 @@ const containerRef = ref<HTMLElement | null>(null)
 const overlayStyles = ['bg-primary top-0', 'bg-lime-400 -top-50']
 
 const tl = gsap.timeline({
-  defaults: { duration: 1, ease: 'power3.outIn' },
+  defaults: { duration: 0.6, ease: 'power3.outIn' },
   onComplete: () => {
     containerRef.value!.style.display = 'none'
   },
@@ -36,7 +40,15 @@ useGSAP(
   { scope: containerRef }
 )
 
-onMounted(() => {
-  containerRef.value!.style.display = 'block'
-})
+watch(
+  () => projectId,
+  () => {
+    tl.restart()
+
+    if (containerRef.value) {
+      containerRef.value!.style.display = 'block'
+    }
+  },
+  { immediate: true }
+)
 </script>
