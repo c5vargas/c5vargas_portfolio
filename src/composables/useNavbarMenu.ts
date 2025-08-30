@@ -61,14 +61,14 @@ export function useNavbarMenu() {
       tl.value = gsap
         .timeline({
           paused: true,
-          defaults: { duration: 0.35, ease: 'power2.out' },
+          defaults: { duration: 0.2, ease: 'power2.out' },
           onReverseComplete: () => {
             menuIsOpen.value = false
           },
         })
         .from(
           listItems.value.chars,
-          { y: 50, stagger: 0.02, duration: 0.5, opacity: 0, ease: 'power2.out' },
+          { y: 50, stagger: 0.02, duration: 0.2, opacity: 0, ease: 'power2.out' },
           0
         )
         .to(overlay.value, { height: '100%' }, 0)
