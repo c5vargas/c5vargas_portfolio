@@ -2,14 +2,16 @@
   <img
     ref="pyramidRef1"
     src="/pyramid.webp"
-    class="absolute -left-20 w-40 opacity-50 md:w-52"
+    class="pointer-events-none absolute -left-20 w-40 opacity-50 md:w-52"
     role="presentational"
+    alt=""
   />
   <img
     ref="pyramidRef2"
     src="/pyramid.webp"
-    class="absolute -right-20 w-40 opacity-50 md:w-52"
+    class="pointer-events-none absolute -right-20 w-40 opacity-50 md:w-52"
     role="presentational"
+    alt=""
   />
 </template>
 

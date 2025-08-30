@@ -7,61 +7,59 @@ const mailtoHref = computed(() => `mailto:${email}`)
 </script>
 
 <template>
-  <footer>
-    <div class="">
-      <div
-        class="container mx-auto flex h-[712px] w-full flex-col justify-center px-10 md:flex-row md:items-center md:justify-between md:px-0"
+  <footer id="contact">
+    <div
+      class="container mx-auto flex h-[712px] w-full flex-col justify-center px-10 md:flex-row md:items-center md:justify-between md:px-0"
+    >
+      <h3
+        class="text-[3rem] leading-[3rem] font-black uppercase md:text-[6rem] md:leading-[6rem] lg:text-[7rem]"
       >
-        <h3
-          class="text-[4rem] leading-[4rem] font-black uppercase md:text-[6rem] md:leading-[6rem] lg:text-[7rem]"
-        >
-          De idea a<br />
-          realidad
-        </h3>
+        De idea a<br />
+        realidad
+      </h3>
 
-        <div class="mt-4 md:mt-0 md:w-1/3">
-          <p class="text-lg text-white">
-            Con más de 6 años de experiencia en desarrollo frontend y fullstack, puedo ayudarte a
-            transformar tus ideas en soluciones digitales escalables, rápidas y seguras.
-          </p>
+      <div class="mt-4 md:mt-0 md:w-1/3">
+        <p class="text-lg text-white">
+          Con más de 6 años de experiencia en desarrollo frontend y fullstack, puedo ayudarte a
+          transformar tus ideas en soluciones digitales escalables, rápidas y seguras.
+        </p>
 
-          <a :href="mailtoHref" class="button group glass mt-4 inline-block text-sm">
-            <span class="shiny-text">Hablemos de tu proyecto</span>
-          </a>
+        <a :href="mailtoHref" class="button group glass mt-4 inline-block text-sm">
+          <span class="shiny-text">Hablemos de tu proyecto</span>
+        </a>
+      </div>
+    </div>
+
+    <section class="bg-gradient-to-b from-black/30 to-primary/10 pb-20">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-4">
+        <div class="col-span-3">
+          <img src="/logo-cream.svg" alt="Logotipo" class="mx-auto w-[250px] md:mx-0" />
+        </div>
+
+        <div class="col-span-1 flex justify-center gap-12 md:justify-end">
+          <div>
+            <span class="text-sm text-gray-400">LINKS</span>
+            <ul class="mt-4">
+              <li class="highlight-black mb-4 text-lg"><a href="#home">Inicio</a></li>
+              <li class="highlight-black mb-4 text-lg"><a href="#about">Sobre mi</a></li>
+              <li class="highlight-black mb-4 text-lg"><a href="#projects">Proyectos</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <span class="text-sm text-gray-400">REDES</span>
+            <ul class="mt-4">
+              <li
+                v-for="social in socialLinks"
+                :key="social.label"
+                class="animation-link highlight-black mb-4 text-lg"
+              >
+                <a target="_blank" :href="social.href">{{ social.label }}</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <section class="bg-gradient-to-b from-black/30 to-primary/10 pb-20">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4">
-          <div class="col-span-3">
-            <img src="/logo-cream.svg" alt="Logotipo" class="mx-auto w-[250px] md:mx-0" />
-          </div>
-
-          <div class="col-span-1 flex justify-center gap-12 md:justify-end">
-            <div>
-              <span class="text-sm text-gray-400">LINKS</span>
-              <ul class="mt-4">
-                <li class="highlight-black mb-4 text-lg"><a href="#home">Inicio</a></li>
-                <li class="highlight-black mb-4 text-lg"><a href="#about">Sobre mi</a></li>
-                <li class="highlight-black mb-4 text-lg"><a href="#projects">Proyectos</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <span class="text-sm text-gray-400">REDES</span>
-              <ul class="mt-4">
-                <li
-                  v-for="social in socialLinks"
-                  :key="social.label"
-                  class="animation-link highlight-black mb-4 text-lg"
-                >
-                  <a target="_blank" :href="social.href">{{ social.label }}</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    </section>
   </footer>
 </template>

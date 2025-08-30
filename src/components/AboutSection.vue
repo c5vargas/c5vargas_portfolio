@@ -6,8 +6,9 @@
     <img
       ref="pyramidRef"
       src="/pyramid.webp"
-      class="absolute -left-20 w-40 md:w-52"
+      class="pointer-events-none absolute -left-20 w-40 md:w-52"
       role="presentational"
+      alt=""
     />
     <div
       class="shade-in w-full rounded-4xl border border-white/30 bg-primary py-20 text-black md:max-w-[700px] md:px-10"
@@ -23,8 +24,9 @@
     <img
       ref="circleRef"
       src="/circle.webp"
-      class="absolute -right-16 w-40 md:w-52"
+      class="pointer-events-none absolute -right-16 w-40 md:w-52"
       role="presentational"
+      alt=""
     />
   </main>
 </template>

@@ -5,13 +5,11 @@
     <div class="relative">
       <ul
         class="group grid w-full grid-cols-1 gap-4 group-hover:[&>li]:opacity-60"
-        role="listbox"
         @mouseleave="resetSelection"
       >
         <li
           v-for="item in portfolio"
           :key="item.id"
-          role="option"
           :aria-selected="workHovered?.id === item.id"
           class="transition-all duration-300 group-hover:opacity-40 hover:!opacity-100"
           @mouseenter="handleMouseEnter(item)"
@@ -34,7 +32,7 @@
           :key="item.id"
           ref="imageRefs"
           class="featured-image-item absolute h-[512px] w-[512px] rounded-xl object-cover opacity-0"
-          :src="item.images[0]"
+          :src="getThumbnail(item)"
           :alt="item.extract"
         />
       </div>
@@ -50,8 +48,8 @@ import { RouterLink } from 'vue-router'
 
 const workRef = ref<HTMLElement | null>(null)
 const featuredImageRef = ref<HTMLElement | null>(null)
-const workHovered = ref<Portfolio | null>(null)
 const imageRefs = ref<HTMLImageElement[]>([])
+const workHovered = ref<Portfolio | null>(null)
 
 const handleMouseEnter = (item: Portfolio) => {
   const nextImg = getImage(item.id)
@@ -109,6 +107,11 @@ const handleMouseMove = (e: MouseEvent) => {
 const getImage = (id: number) => {
   const index = portfolio.findIndex(p => p.id === id)
   return imageRefs.value[index] || null
+}
+
+const getThumbnail = (project: Portfolio) => {
+  if (!project.images[0]) return ''
+  return project.images[0].replace('/upload/', '/upload/c_fill,w_512,h_512,g_face/')
 }
 
 onMounted(() => {

@@ -1,5 +1,9 @@
 <template>
-  <section ref="containerRef" class="relative flex h-[992px] items-center justify-center">
+  <section
+    ref="containerRef"
+    id="experience"
+    class="relative flex h-[992px] items-center justify-center"
+  >
     <div class="absolute inset-0 flex items-center justify-center">
       <div class="relative grid h-full w-full max-w-5xl grid-cols-3 gap-12 md:grid-cols-4">
         <component

@@ -27,6 +27,7 @@
 
         <nav class="relative ms-auto">
           <button
+            ref="triggerButton"
             class="cursor-pointer"
             @click="toggleMenu"
             :aria-expanded="menuIsOpen"
@@ -42,6 +43,8 @@
         id="primary-menu"
         ref="menu"
         :aria-hidden="!menuIsOpen"
+        :inert="!menuIsOpen"
+        :hidden="!menuIsOpen"
         class="z-50 pt-12 will-change-transform"
         :class="menuIsOpen ? 'pointer-events-auto' : 'pointer-events-none'"
       >
@@ -100,8 +103,8 @@ const { menuIsOpen, menu, header, overlay, toggleMenu, closeMenu } = useNavbarMe
 
 const navItems = [
   { label: '✤ Inicio', href: '/' },
-  { label: 'Experiencia', href: '/#exp' },
+  { label: 'Experiencia', href: '/#experience' },
   { label: 'Proyectos', href: '/#projects' },
-  { label: 'Contacto', href: '/#contacto' },
+  { label: 'Contacto', href: '#contact' },
 ]
 </script>
