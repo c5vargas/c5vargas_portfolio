@@ -1,10 +1,15 @@
 <template>
   <MainHeader />
-
-  <main class="overflow-hidden">
-    <RouterView />
-  </main>
-
+  <Suspense>
+    <template #default>
+      <main class="overflow-hidden">
+        <RouterView />
+      </main>
+    </template>
+    <template #fallback>
+      <div class="h-screen min-h-screen animate-pulse bg-black"></div>
+    </template>
+  </Suspense>
   <FooterComponent />
 </template>
 
@@ -12,9 +17,9 @@
 import { ScrollTrigger } from 'gsap/all'
 import { RouterView } from 'vue-router'
 import { gsap } from 'gsap'
+import { onBeforeUnmount } from 'vue'
 import MainHeader from '@/components/MainHeader.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
-import { onBeforeUnmount } from 'vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
