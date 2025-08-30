@@ -1,4 +1,11 @@
 # 📦 Changelog
+### [0.0.43](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.42...v0.0.43) (2025-08-30)
+
+
+### 🐛 Bug Fixes
+
+* **HerBannerBackground:** corrected BufferAttribute type ([6d2e7c0](https://github.com/c5vargas/c5vargas_portfolio/commit/6d2e7c0f2f861da660e537884339d56fc33703ee))
+
 ### [0.0.42](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.41...v0.0.42) (2025-08-30)
 
 
