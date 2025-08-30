@@ -14,7 +14,13 @@
     >
       <main class="container mx-auto flex items-center gap-6 p-4">
         <RouterLink to="/" title="Volver al inicio">
-          <img src="/logo-cream.svg" alt="Logo" class="w-20 duration-200 hover:scale-110" />
+          <img
+            src="/logo-cream.svg"
+            alt="Logo"
+            width="80"
+            height="80"
+            class="duration-200 hover:scale-110"
+          />
         </RouterLink>
 
         <div

@@ -30,7 +30,7 @@ import { useGSAP } from 'gsap-vue'
 
 import PyramidDecor from '@/components/projects/PyramidDecor.vue'
 import MainButton from '@/components/MainButton.vue'
-import gsap from 'gsap'
+import { gsap } from 'gsap'
 
 const { project } = defineProps<{ project: Portfolio }>()
 

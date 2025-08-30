@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useGSAP } from 'gsap-vue'
-import gsap from 'gsap'
+import { gsap } from 'gsap'
 
 const { projectId } = defineProps<{
   projectId: number

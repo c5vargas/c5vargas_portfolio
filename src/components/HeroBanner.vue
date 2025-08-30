@@ -29,9 +29,12 @@
 <script setup lang="ts">
 import { gsap } from 'gsap'
 import { useGSAP } from 'gsap-vue'
-import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { computed, defineAsyncComponent, onMounted, onUnmounted, ref } from 'vue'
 import ArrowUpRight from './icons/ArrowUpRight.vue'
-import HeroBannerBackground from './HeroBannerBackground.vue'
+
+const HeroBannerBackground = defineAsyncComponent(
+  () => import('@/components/HeroBannerBackground.vue')
+)
 
 const hero = ref<HTMLElement | null>(null)
 const btn = ref<HTMLElement | null>(null)

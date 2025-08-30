@@ -42,7 +42,7 @@
 
 <script setup lang="ts">
 import portfolio, { Portfolio } from '@/libs/mock/portfolio'
-import gsap from 'gsap'
+import { gsap } from 'gsap'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { RouterLink } from 'vue-router'
 

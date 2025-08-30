@@ -10,7 +10,7 @@
 import { computed, ref } from 'vue'
 import type { Portfolio } from '@/libs/mock/portfolio'
 import { useGSAP } from 'gsap-vue'
-import gsap from 'gsap'
+import { gsap } from 'gsap'
 
 const { project } = defineProps<{
   project: Portfolio

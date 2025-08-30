@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import portfolio, { Portfolio } from '@/libs/mock/portfolio'
-import gsap from 'gsap'
+import { gsap } from 'gsap'
 import { useGSAP } from 'gsap-vue'
 import { ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'

@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import gsap from 'gsap'
+import { gsap } from 'gsap'
 
 defineOptions({ inheritAttrs: false })
 

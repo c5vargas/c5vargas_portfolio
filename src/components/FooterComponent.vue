@@ -37,7 +37,9 @@ const mailtoHref = computed(() => `mailto:${email}`)
             src="/logo-cream.svg"
             loading="lazy"
             alt="Logotipo"
-            class="mx-auto w-[250px] md:mx-0"
+            width="250"
+            height="250"
+            class="mx-auto md:mx-0"
           />
         </div>
 

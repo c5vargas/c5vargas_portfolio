@@ -17,7 +17,7 @@ import type { Portfolio } from '@/libs/mock/portfolio'
 import ImagesCarousel from '../ImagesCarousel.vue'
 import { ref } from 'vue'
 import { useGSAP } from 'gsap-vue'
-import gsap from 'gsap'
+import { gsap } from 'gsap'
 
 const { project } = defineProps<{ project: Portfolio }>()
 const containerRef = ref<HTMLElement | null>(null)

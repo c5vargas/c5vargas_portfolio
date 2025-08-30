@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import gsap from 'gsap'
+import { gsap } from 'gsap'
 import { useGSAP } from 'gsap-vue'
 import { ref } from 'vue'
 
