@@ -61,9 +61,10 @@ function init() {
   }
   geometry.setIndex(indices)
 
+  const uv = geometry.attributes.uv as THREE.BufferAttribute
   const pos = geometry.attributes.position
-  const uv = geometry.attributes.uv
   const vec2 = new THREE.Vector2()
+
   for (let i = 0; i < pos.count; i++) {
     vec2.fromBufferAttribute(uv, i).multiplyScalar(3)
     pos.setY(i, perlin.noise(vec2.x, vec2.y, 0) * 6)
@@ -98,7 +99,7 @@ function animate() {
 
   const time = performance.now() * 0.0006
   const pos = lineSegments.geometry.attributes.position
-  const uv = lineSegments.geometry.attributes.uv
+  const uv = lineSegments.geometry.attributes.uv as THREE.BufferAttribute
   const vec2 = new THREE.Vector2()
 
   for (let i = 0; i < pos.count; i++) {
