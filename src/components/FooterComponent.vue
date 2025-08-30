@@ -33,7 +33,12 @@ const mailtoHref = computed(() => `mailto:${email}`)
     <section class="bg-gradient-to-b from-black/30 to-primary/10 pb-20">
       <div class="container mx-auto grid grid-cols-1 md:grid-cols-4">
         <div class="col-span-3">
-          <img src="/logo-cream.svg" alt="Logotipo" class="mx-auto w-[250px] md:mx-0" />
+          <img
+            src="/logo-cream.svg"
+            loading="lazy"
+            alt="Logotipo"
+            class="mx-auto w-[250px] md:mx-0"
+          />
         </div>
 
         <div class="col-span-1 flex justify-center gap-12 md:justify-end">

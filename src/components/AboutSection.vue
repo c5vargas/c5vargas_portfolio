@@ -7,7 +7,8 @@
       ref="pyramidRef"
       src="/pyramid.webp"
       class="pointer-events-none absolute -left-20 w-40 md:w-52"
-      role="presentational"
+      role="presentation"
+      loading="lazy"
       alt=""
     />
     <div
@@ -25,7 +26,8 @@
       ref="circleRef"
       src="/circle.webp"
       class="pointer-events-none absolute -right-16 w-40 md:w-52"
-      role="presentational"
+      role="presentation"
+      loading="lazy"
       alt=""
     />
   </main>

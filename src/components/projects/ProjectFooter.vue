@@ -16,6 +16,7 @@
           ref="imageEl"
           class="absolute top-[100%] left-0 h-full w-full rounded-t-2xl object-cover"
           :src="project.images[0]"
+          loading="lazy"
           :alt="`Imagen destacada del proyecto ${project.extract}`"
         />
       </div>

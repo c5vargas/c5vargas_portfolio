@@ -10,7 +10,6 @@
         <li
           v-for="item in portfolio"
           :key="item.id"
-          :aria-selected="workHovered?.id === item.id"
           class="transition-all duration-300 group-hover:opacity-40 hover:!opacity-100"
           @mouseenter="handleMouseEnter(item)"
         >
@@ -29,11 +28,12 @@
       >
         <img
           v-for="item in portfolio"
-          :key="item.id"
           ref="imageRefs"
-          class="featured-image-item absolute h-[512px] w-[512px] rounded-xl object-cover opacity-0"
+          :key="item.id"
           :src="getThumbnail(item)"
           :alt="item.extract"
+          class="featured-image-item absolute h-[512px] w-[512px] rounded-xl object-cover opacity-0"
+          loading="lazy"
         />
       </div>
     </div>

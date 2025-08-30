@@ -3,14 +3,16 @@
     ref="pyramidRef1"
     src="/pyramid.webp"
     class="pointer-events-none absolute -left-20 w-40 opacity-50 md:w-52"
-    role="presentational"
+    role="presentation"
+    loading="lazy"
     alt=""
   />
   <img
     ref="pyramidRef2"
     src="/pyramid.webp"
     class="pointer-events-none absolute -right-20 w-40 opacity-50 md:w-52"
-    role="presentational"
+    role="presentation"
+    loading="lazy"
     alt=""
   />
 </template>
