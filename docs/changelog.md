@@ -1,4 +1,31 @@
 # 📦 Changelog
+### [0.0.42](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.41...v0.0.42) (2025-08-30)
+
+
+### ✨ Features
+
+* **cloudinary:** preconnect cloudinary services with preconnect link ([3831c71](https://github.com/c5vargas/c5vargas_portfolio/commit/3831c7144d97ff978c3c459d97cdd4322757c3c8))
+* **lazy:** add loading lazy on images above the fold ([9b282ef](https://github.com/c5vargas/c5vargas_portfolio/commit/9b282efc25c06e34d92821e4c7c31068a5acb714))
+* **router:** add lazy loading to Vue Router routes ([c34ee0b](https://github.com/c5vargas/c5vargas_portfolio/commit/c34ee0b020c43fd6e93ce63868f91127e19f34bd))
+* run vite build before execute vite preview ([90818b4](https://github.com/c5vargas/c5vargas_portfolio/commit/90818b4f5928dacb47f2726f1e2105b9de3385f2))
+* **vite:** add to build rollup options three & gsap ([b1731f9](https://github.com/c5vargas/c5vargas_portfolio/commit/b1731f954796dd80856ec8ed9eea8c6bd38137f4))
+
+
+### 🐛 Bug Fixes
+
+* accesibility and structural improvements ([20b0f77](https://github.com/c5vargas/c5vargas_portfolio/commit/20b0f770417b5598971674e0bc8d29aec39cfff0))
+* **fonts:** add display swap on fonts to decrease CLS ([33494d1](https://github.com/c5vargas/c5vargas_portfolio/commit/33494d145995242aa87f32fa399c4c2d2db96c0d))
+* **gsap:** add destructured gsap module ([8e5fe3e](https://github.com/c5vargas/c5vargas_portfolio/commit/8e5fe3e0db3dc591b997e37a1b6d601578f69fee))
+* **router:** improve router lazy loading ([058e2ba](https://github.com/c5vargas/c5vargas_portfolio/commit/058e2ba45c076db96b93c2099ea693dcad30fac2))
+* **router:** smooth  scroll to page  if route has hash ([4e38ede](https://github.com/c5vargas/c5vargas_portfolio/commit/4e38ede2ef6049f4f418365cba7044d5d72589af))
+* **suspende:** add suspense tag on lazy loading components ([c662dbf](https://github.com/c5vargas/c5vargas_portfolio/commit/c662dbfafa28764a3a282de05ff63e03e0d541f7))
+
+
+### 🔧 Chores
+
+* **fix:** updated build script from package.json ([83b87a6](https://github.com/c5vargas/c5vargas_portfolio/commit/83b87a6c69a13eb0f18378a0e1fc342f950be635))
+* **three:** add three types ([1f22c4e](https://github.com/c5vargas/c5vargas_portfolio/commit/1f22c4ee53c86456104928ce4cb0072c67580ac1))
+
 ### [0.0.41](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.40...v0.0.41) (2025-08-29)
 
 
