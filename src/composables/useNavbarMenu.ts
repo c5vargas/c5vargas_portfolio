@@ -1,6 +1,6 @@
 import { ref, onBeforeUnmount, onMounted } from 'vue'
 import { useGSAP } from 'gsap-vue'
-import gsap from 'gsap'
+import { gsap } from 'gsap'
 import SplitType from 'split-type'
 import { ScrollTrigger } from 'gsap/all'
 import { useRouter } from 'vue-router'
