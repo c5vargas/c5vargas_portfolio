@@ -1,6 +1,5 @@
 import './assets/tailwind.css'
 import '@fontsource/quattrocento/400.css?display=swap'
-import '@fontsource/quattrocento/700.css?display=swap'
 
 import { createApp } from 'vue'
 import { router } from './router'
