@@ -1,4 +1,11 @@
 # 📦 Changelog
+### [0.0.44](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.43...v0.0.44) (2025-08-30)
+
+
+### ✨ Features
+
+* **fonts:** removed quattrocento 700 ([a73f8b3](https://github.com/c5vargas/c5vargas_portfolio/commit/a73f8b35c9209c320b8927af6bacc113b77f7077))
+
 ### [0.0.43](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.42...v0.0.43) (2025-08-30)
 
 
