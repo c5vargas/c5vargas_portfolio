@@ -51,7 +51,7 @@ useGSAP(
       ease: 'power2.out',
     })
 
-    gsap.from(['span', 'a'], {
+    gsap.from(['.hero-subtitle', 'a'], {
       duration: 1,
       x: -50,
       opacity: 0,
