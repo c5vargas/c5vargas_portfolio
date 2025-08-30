@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "vite --port 3000",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite build && vite preview",
     "lint": "npx eslint .",
     "test": "vitest",
     "format:write": "prettier .  --write",
