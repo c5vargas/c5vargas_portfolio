@@ -4,22 +4,29 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
-import * as THREE from 'three'
+import {
+  Scene,
+  Color,
+  PerspectiveCamera,
+  WebGLRenderer,
+  LineSegments,
+  Vector2,
+  PlaneGeometry,
+  BufferAttribute,
+  LineBasicMaterial,
+} from 'three'
 import { ImprovedNoise } from 'three/examples/jsm/math/ImprovedNoise.js'
 
 const container = ref<HTMLElement | null>(null)
-let scene: THREE.Scene,
-  camera: THREE.PerspectiveCamera,
-  renderer: THREE.WebGLRenderer,
-  lineSegments: THREE.LineSegments
+let scene: Scene, camera: PerspectiveCamera, renderer: WebGLRenderer, lineSegments: LineSegments
 const perlin = new ImprovedNoise()
 
 const segX = 200
 const segY = 200
 const size = 150
 
-let mouseOffset = new THREE.Vector2(0, 0)
-let targetMouseOffset = new THREE.Vector2(0, 0)
+let mouseOffset = new Vector2(0, 0)
+let targetMouseOffset = new Vector2(0, 0)
 
 onMounted(() => {
   init()
@@ -35,19 +42,19 @@ onUnmounted(() => {
 })
 
 function init() {
-  scene = new THREE.Scene()
-  scene.background = new THREE.Color(0x010a00)
+  scene = new Scene()
+  scene.background = new Color(0x010a00)
 
   // Cámara más baja y con más inclinación para intensificar perspectiva
-  camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 1000)
+  camera = new PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 1000)
   camera.position.set(0, 25, 10)
   camera.lookAt(0, 0, 0)
 
-  renderer = new THREE.WebGLRenderer({ antialias: true })
+  renderer = new WebGLRenderer({ antialias: true })
   renderer.setSize(window.innerWidth, window.innerHeight)
   container.value!.appendChild(renderer.domElement)
 
-  const geometry = new THREE.PlaneGeometry(size, size, segX, segY)
+  const geometry = new PlaneGeometry(size, size, segX, segY)
   geometry.rotateX(-Math.PI / 2)
 
   // Crear solo líneas verticales
@@ -61,9 +68,9 @@ function init() {
   }
   geometry.setIndex(indices)
 
-  const uv = geometry.attributes.uv as THREE.BufferAttribute
+  const uv = geometry.attributes.uv as BufferAttribute
   const pos = geometry.attributes.position
-  const vec2 = new THREE.Vector2()
+  const vec2 = new Vector2()
 
   for (let i = 0; i < pos.count; i++) {
     vec2.fromBufferAttribute(uv, i).multiplyScalar(3)
@@ -71,13 +78,13 @@ function init() {
   }
   pos.needsUpdate = true
 
-  const material = new THREE.LineBasicMaterial({
+  const material = new LineBasicMaterial({
     color: 0x414141,
     transparent: true,
     opacity: 0.45,
   })
 
-  lineSegments = new THREE.LineSegments(geometry, material)
+  lineSegments = new LineSegments(geometry, material)
   scene.add(lineSegments)
 }
 
@@ -99,8 +106,8 @@ function animate() {
 
   const time = performance.now() * 0.0006
   const pos = lineSegments.geometry.attributes.position
-  const uv = lineSegments.geometry.attributes.uv as THREE.BufferAttribute
-  const vec2 = new THREE.Vector2()
+  const uv = lineSegments.geometry.attributes.uv as BufferAttribute
+  const vec2 = new Vector2()
 
   for (let i = 0; i < pos.count; i++) {
     vec2.fromBufferAttribute(uv, i).multiplyScalar(3)
