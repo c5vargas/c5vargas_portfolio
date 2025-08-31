@@ -44,20 +44,17 @@ const mailtoHref = computed(() => `mailto:${email}`)
 
 useGSAP(
   () => {
-    gsap.from('h1', {
-      duration: 1,
-      y: 50,
-      opacity: 0,
-      ease: 'power2.out',
+    const tl = gsap.timeline({
+      defaults: {
+        duration: 5,
+        delay: 0.3,
+        ease: 'power2.out',
+      },
     })
 
-    gsap.from(['.hero-subtitle', 'a'], {
-      duration: 1,
-      x: -50,
-      opacity: 0,
-      ease: 'power2.out',
-      delay: 0.2,
-    })
+    const elements = ['h1', '.hero-subtitle', 'a']
+
+    tl.fromTo(elements, { opacity: 0 }, { opacity: 1, duration: 2 })
   },
   { scope: hero }
 )
