@@ -1,4 +1,12 @@
 # 📦 Changelog
+### [0.0.47](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.46...v0.0.47) (2025-08-31)
+
+
+### ✨ Features
+
+* **google:** removed google tag ([039a5e4](https://github.com/c5vargas/c5vargas_portfolio/commit/039a5e4f56cc5fdeeb54a7eab25f1f1729a5e9ff))
+* **threeJS:** import only needed fn from 'three' ([835a7f5](https://github.com/c5vargas/c5vargas_portfolio/commit/835a7f54836944610f5c9b1436ed5c49568f2647))
+
 ### [0.0.46](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.45...v0.0.46) (2025-08-31)
 
 
