@@ -9,8 +9,8 @@
   },
   "scripts": {
     "dev": "vite --port 3000",
-    "build": "vite build",
-    "preview": "vite build && vite preview",
+    "build": "vite build --mode production",
+    "preview": "vite build --mode production && vite preview",
     "lint": "npx eslint .",
     "test": "vitest",
     "format:write": "prettier .  --write",

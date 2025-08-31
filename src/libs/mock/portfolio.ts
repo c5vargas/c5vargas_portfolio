@@ -22,7 +22,7 @@ const portfolio = [
       '<p>Me encargué del desarrollo del frontend con React.js + TailwindCSS, creando una interfaz responsive y con una UX centrada en la simplicidad. Implementé react-router para navegación fluida y react-helmet para SEO. Con este proyecto demuestro mi capacidad para construir plataformas escalables y optimizadas en el sector deportivo.',
     stack: 'React, TailwindCSS, React Router, Typescript, HTML, CSS, Framer',
     images: [
-      'https://res.cloudinary.com/carvar-es/image/upload/v1756405747/www.carvar.es/projects/rendfitt/rendfitt-hero_zvltcs.png',
+      'https://res.cloudinary.com/carvar-es/image/upload/v1756650481/www.carvar.es/projects/rendfitt/rendfitt-hero_cw1t6l.avif',
       'https://res.cloudinary.com/carvar-es/image/upload/v1756405725/www.carvar.es/projects/rendfitt/rendfitt-responsive_molju8.avif',
       'https://res.cloudinary.com/carvar-es/image/upload/v1756393500/www.carvar.es/projects/rendfitt/rendfitt-about_jtqnry.avif',
       'https://res.cloudinary.com/carvar-es/image/upload/v1756393502/www.carvar.es/projects/rendfitt/rendfitt-training_uihld8.avif',
