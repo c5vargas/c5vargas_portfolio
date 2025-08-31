@@ -1,4 +1,11 @@
 # 📦 Changelog
+### [0.0.45](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.44...v0.0.45) (2025-08-31)
+
+
+### 🐛 Bug Fixes
+
+* replaced .png to .avif and change build command with production mode flag ([bf652fb](https://github.com/c5vargas/c5vargas_portfolio/commit/bf652fb878705b0f5828b86a4b7ce3c0c4303827))
+
 ### [0.0.44](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.43...v0.0.44) (2025-08-30)
 
 
