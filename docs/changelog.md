@@ -1,4 +1,11 @@
 # 📦 Changelog
+### [0.0.46](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.45...v0.0.46) (2025-08-31)
+
+
+### ✨ Features
+
+* **HomePage:** add lazy loading on components and improves on HeroBanner enter animation ([db554d5](https://github.com/c5vargas/c5vargas_portfolio/commit/db554d5e9efc9bc839e3a746549803662ce344c7))
+
 ### [0.0.45](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.44...v0.0.45) (2025-08-31)
 
 
