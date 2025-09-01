@@ -1,7 +1,7 @@
 <template>
   <section ref="hero" class="relative h-screen overflow-hidden">
     <div class="absolute top-0 left-0 h-full w-full overflow-hidden bg-gray-950">
-      <HeroBannerBackground />
+      <Hero3D />
     </div>
     <div
       class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-gradient-to-b from-black/30 to-black/30 px-5 text-center"
@@ -29,12 +29,9 @@
 <script setup lang="ts">
 import { gsap } from 'gsap'
 import { useGSAP } from 'gsap-vue'
-import { computed, defineAsyncComponent, onMounted, onUnmounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import ArrowUpRight from './icons/ArrowUpRight.vue'
-
-const HeroBannerBackground = defineAsyncComponent(
-  () => import('@/components/HeroBannerBackground.vue')
-)
+import Hero3D from './hero/Hero3D.vue'
 
 const hero = ref<HTMLElement | null>(null)
 const btn = ref<HTMLElement | null>(null)

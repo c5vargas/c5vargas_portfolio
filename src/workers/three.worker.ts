@@ -1,9 +1,3 @@
-<template>
-  <div ref="container" class="m-0 h-screen w-full overflow-hidden p-0"></div>
-</template>
-
-<script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
 import {
   Scene,
   Color,
@@ -17,48 +11,62 @@ import {
 } from 'three'
 import { ImprovedNoise } from 'three/examples/jsm/math/ImprovedNoise.js'
 
-const container = ref<HTMLElement | null>(null)
-let scene: Scene, camera: PerspectiveCamera, renderer: WebGLRenderer, lineSegments: LineSegments
+let renderer: WebGLRenderer
+let scene: Scene
+let camera: PerspectiveCamera
+let lineSegments: LineSegments
+const mouseOffset = new Vector2(0, 0)
+const targetMouseOffset = new Vector2(0, 0)
 const perlin = new ImprovedNoise()
 
-const segX = 200
-const segY = 200
-const size = 150
+self.onmessage = e => {
+  if (e.data.canvas) {
+    init(e.data.canvas, e.data.size.w, e.data.size.h)
+    animate()
+  }
 
-let mouseOffset = new Vector2(0, 0)
-let targetMouseOffset = new Vector2(0, 0)
+  if (e.data.type === 'resize') {
+    camera.aspect = e.data.w / e.data.h
+    camera.updateProjectionMatrix()
+    renderer.setSize(e.data.w, e.data.h, false)
+  }
 
-onMounted(() => {
-  init()
-  animate()
-  window.addEventListener('resize', onWindowResize)
-  window.addEventListener('mousemove', onMouseMove)
-})
+  if (e.data.type === 'mousemove') {
+    targetMouseOffset.x = (e.data.x / renderer.domElement.width - 0.5) * 2
+    targetMouseOffset.y = (e.data.y / renderer.domElement.height - 0.5) * 2
+  }
+}
 
-onUnmounted(() => {
-  window.removeEventListener('resize', onWindowResize)
-  window.removeEventListener('mousemove', onMouseMove)
-  if (renderer) renderer.dispose()
-})
+function init(canvas: OffscreenCanvas, w: number, h: number) {
+  const gl = canvas.getContext('webgl2')
 
-function init() {
+  if (!gl) {
+    console.error('WebGL2 no soportado en OffscreenCanvas')
+    return
+  }
+
   scene = new Scene()
   scene.background = new Color(0x010a00)
 
-  // Cámara más baja y con más inclinación para intensificar perspectiva
-  camera = new PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 1000)
+  camera = new PerspectiveCamera(80, w / h, 0.1, 1000)
   camera.position.set(0, 25, 10)
   camera.lookAt(0, 0, 0)
 
-  renderer = new WebGLRenderer({ antialias: true })
-  renderer.setSize(window.innerWidth, window.innerHeight)
-  container.value!.appendChild(renderer.domElement)
+  renderer = new WebGLRenderer({
+    canvas,
+    context: canvas.getContext('webgl2', { antialias: true, powerPreference: 'high-performance' })!,
+  })
+
+  renderer.setSize(w, h, false)
+
+  const segX = 200
+  const segY = 200
+  const size = 150
 
   const geometry = new PlaneGeometry(size, size, segX, segY)
   geometry.rotateX(-Math.PI / 2)
 
-  // Crear solo líneas verticales
-  let indices: number[] = []
+  const indices: number[] = []
   for (let x = 0; x <= segX; x++) {
     for (let y = 0; y < segY; y++) {
       const idx1 = y * (segX + 1) + x
@@ -88,17 +96,6 @@ function init() {
   scene.add(lineSegments)
 }
 
-function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight
-  camera.updateProjectionMatrix()
-  renderer.setSize(window.innerWidth, window.innerHeight)
-}
-
-function onMouseMove(event: MouseEvent) {
-  targetMouseOffset.x = (event.clientX / window.innerWidth - 0.5) * 2
-  targetMouseOffset.y = (event.clientY / window.innerHeight - 0.5) * 2
-}
-
 function animate() {
   requestAnimationFrame(animate)
 
@@ -111,24 +108,17 @@ function animate() {
 
   for (let i = 0; i < pos.count; i++) {
     vec2.fromBufferAttribute(uv, i).multiplyScalar(3)
-
-    // Factor de profundidad más agresivo
     const zWorld = pos.getZ(i)
-    const depthFactor = zWorld * 0.15 // antes 0.05
-
-    // Ondas más grandes cerca, más suaves lejos
+    const depthFactor = zWorld * 0.15
     const amplitude = 8 - Math.abs(zWorld) * 0.1
-
     const noiseValue = perlin.noise(
       vec2.x + mouseOffset.x * 3,
       vec2.y + mouseOffset.y * 3,
       time + depthFactor
     )
-
     pos.setY(i, noiseValue * amplitude)
   }
 
   pos.needsUpdate = true
   renderer.render(scene, camera)
 }
-</script>
