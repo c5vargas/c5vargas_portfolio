@@ -1,4 +1,16 @@
 # 📦 Changelog
+### [0.0.48](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.47...v0.0.48) (2025-09-01)
+
+
+### 🔧 Chores
+
+* **vite:** separate import chunks ([d77a481](https://github.com/c5vargas/c5vargas_portfolio/commit/d77a481f8d5e93ff4239c1b5d886efed80251221))
+
+
+### ✨ Features
+
+* **gsap:** import ScrollTrigger directly from gsap/ScrollTrigger ([d54590f](https://github.com/c5vargas/c5vargas_portfolio/commit/d54590f844c724fd292eb351f0e80be9c36f72ee))
+
 ### [0.0.47](https://github.com/c5vargas/c5vargas_portfolio/compare/v0.0.46...v0.0.47) (2025-08-31)
 
 
