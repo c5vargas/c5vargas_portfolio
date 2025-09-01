@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { ScrollTrigger } from 'gsap/all'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { RouterView } from 'vue-router'
 import { gsap } from 'gsap'
 import { onBeforeUnmount } from 'vue'
