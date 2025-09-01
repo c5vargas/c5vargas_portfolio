@@ -16,7 +16,8 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'three-gsap': ['three', 'gsap'],
+          three: ['three'],
+          gsap: ['gsap'],
         },
       },
     },
